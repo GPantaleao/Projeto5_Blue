@@ -1,0 +1,95 @@
+Projeto 5 - Historia Interativa
+
+Tema - Dia de Cão (Trata-se de uma historia sobre o dia a dia de um cachorro de rua)
+
+Parametros Cão (Nome, Humor, Fome, Frio, Energia)
+
+===== ====== ====== ===== ====== ===== ====== ====== ===== ====== ===== ====== ====== ===== ====== ===== ======
+(Enunciado/Regras do jogo)
+
+Você será um cachorrinho de rua, nesta trama seu objetivo é sobreviver e ser adotado enquanto você foge do seu pior vilão...
+a carrocinha, neste jogo você deverá ficar atento a algumas caracteristicas do cão. 
+
+Humor - Seu humor é baseado no nivel de sucesso referente as suas escolha, se você tiver sucesso seu nivel de humor é aumenta, senão,
+seu nivel de humor sofre alterações, tudo que você faz afeta seu humor.
+
+Fome - Seu nivel de fome, é atrelado ao seu humor e energia, portanto, tente sempre mantelá nos conformes.
+
+Frio - Seu nivel de frio, é atrelado ao seu humor, um cachorrinho quente é um cachorro feliz :)
+
+Energia - Sua energia é seus pontos de ação, todas as suas atividades gastam energia, tente manter sua barriguinha cheia, se sua energia for
+zerada, seu dia encerrará automaticamente.
+
+===== ====== ====== ===== ====== ===== ====== ====== ===== ====== ===== ====== ====== ===== ====== ===== ======
+(Jogo)  @ - Conseguiu na primeira tentativa
+	$ - Conseguiu na segunda tentativa
+	! - Não Conseguiu
+	TP - Tempo para cada ação
+
+"São 7AM(horario), voce esta em um terreno baldio, qual sera sua ação:"
+==============
+Humor - Feliz |   1 - Procurar comida
+Fome - 50     |	  2 - Procurar companhia
+Frio - 50     |	  3 - Procurar um abrigo
+Energia - 50  |   4 - Voltar a dormir 
+==============	  
+
+OP1 -   1 - Procurar no lixo @ - (20 Fome 10 Energia 5 Humor) $ - (10 Fome 5 Energia 5 Humor) ! - (15 Energia -5 Humor) TP(20 min)
+	
+	2 - Procurar alguem para ti alimentar @ - (30 Fome 20 Energia 10 Humor) $ - (20 Fome 10 Energia 5 Humor) ! - (20 Energia -10 Humor) TP(30 min)
+===== ====== ====== ===== ====== ===== ====== ====== ===== ====== ===== ====== ====== ===== ====== ===== ======
+OP2 -  @ Voce encontrou um amigo de rua - (-5 Fome -10 Energia 20 Humor) TP(20)
+$ Voce encontrou um cachorro domestico - (@ Ele brincou -5 Fome -10 Energia 20 Humor)(15) (! A dona nao deixou -25 Humor) TP(5)
+! - (-5 Fome -10 Energia -10 Humor) TP(10)
+===== ====== ====== ===== ====== ===== ====== ====== ===== ====== ===== ====== ====== ===== ====== ===== ======
+OP3 - @ - (-10 Energia 15 Humor) ! - (-15 Energia -5 Humor) TP(20 min)
+===== ====== ====== ===== ====== ===== ====== ====== ===== ====== ===== ====== ====== ===== ====== ===== ======	
+
+OP5 -  Dormir (30 Energia -20 Fome)
+
+===== ====== ====== ===== ====== ===== ====== ====== ===== ====== ===== ====== ====== ===== ====== ===== ======
+ 
+"São (horario), voce esta em um (local), qual sera sua ação:" (Sem as opções escolhidas)
+
+==============
+Humor - Feliz |   1 - Procurar comida
+Fome - 50     |	  2 - Procurar companhia
+Frio - 50     |	  3 - Procurar um abrigo
+Energia - 50  |   4 - Explorar a regiao
+==============	  5 - Voltar a dormir 
+
+OP4 -   1 - Você encontrou um parque, Voce quer ir? [S/N]
+		1 - Procurar comida 
+		2 - Procurar companhia
+  		3 - Procurar um abrigo
+	2 - Você encontrou um shopping, Voce quer ir? [S/N]
+		1 - Procurar comida
+		2 - Procurar companhia
+  		3 - Procurar um abrigo
+	3 - Você encontrou uma padaria, Voce quer ir? [S/N]
+		1 - Procurar comida
+		2 - Procurar companhia
+  		3 - Procurar um abrigo
+===== ====== ====== ===== ====== ===== ====== ====== ===== ====== ===== ====== ====== ===== ====== ===== ======
+OP1 - Na sua procura voce encontra um cachorro hostil 
+1 - Fugir 	@ - (-10 Energia 5 Humor) ! - (-15 Energia -10 Humor)(40)
+2 - Esconder 	@ - (-10 Energia 5 Humor) ! - (-15 Energia -10 Humor)(40)
+3 - Enfrentar 	@ - (-10 Energia 5 Humor) ! - (-15 Energia -10 Humor)(40)	
+
+
+OP2 - Voce encontrou a carrocinha
+1 - Fugir 	@ - (-20 Energia -10 Fome 5 Humor) ! - (-15 Energia -10 Humor)(40)
+2 - Esconder 	@ - (-10 Energia -5 Humor) ! - (-15 Energia -10 Humor)(40)
+
+Se a opção cair em !
+1 - Fugir
+#PePaTe  @ - Voce fugiu(10 Humor 15 Energia)   ! - (20 Energia) (Tentar denovo) | Se Energia == 0, GAME OVER
+2 - Morder
+#Dado  @ - Voce fugiu(10 Humor 15 Energia)   ! - (20 Energia) (Tentar denovo) | Se Energia == 0, GAME OVER
+
+3 - Ser pego (-20 Humor -25 Energia -10 Fome)
+Pode  ou nao ser adotado
+
+
+
+
