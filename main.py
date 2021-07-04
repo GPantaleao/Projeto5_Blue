@@ -7,6 +7,6 @@ if __name__ == '__main__':
     intro = Introducao()
     intro.executar()
     relogio = Relogio()
-    personagem = Personagem('')
+    personagem = Personagem('Gaara')
     fase1(relogio, personagem)
 
