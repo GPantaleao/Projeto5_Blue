@@ -6,8 +6,9 @@ from fases.fases import fase1
 
 if __name__ == '__main__':
     intro = Introducao()
-    intro.executar()
+    # intro.executar()   NÃO ESQUECER DE TIRAR DEPOIS
     relogio = Relogio()
-    personagem = Personagem('Gaara')
+    nome = input('Digite o nome do seu cão amigo(a): ')
+    personagem = Personagem(nome)
     fase1(relogio, personagem)
 

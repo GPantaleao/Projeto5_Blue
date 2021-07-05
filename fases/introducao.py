@@ -1,20 +1,28 @@
+from time import sleep
+from tqdm import tqdm   #importa a barra de carregamento#
+from auxiliar.funcoes_auxiliares import print_delay
+
 class Introducao:
     def __init__(self):
         pass
     def executar(self):
-        print('''
+        print_delay('''
         Jogo - Dia de Cão 
-Nesta trama seu objetivo é ajudar um cachorro de rua a sobreviver e ser adotado, enquanto foge de um grande inimigo, a carrocinha. Você terá a oportunidade de conhecer o dia de um cão, e ajuda- lo nas melhores escol
- neste jogo você deverá ficar atento a algumas caracteristicas do cão. 
+       
+Nesta trama você terá a oprtunidade de conhecer o dia de um cão, o objetivo é ajudar um cachorro de rua a sobreviver e ser adotado,  enquanto foge de um grande inimigo, a carrocinha. 
 
-Humor - Seu humor é baseado no nivel de sucesso referente as suas escolha, se você tiver sucesso seu nivel de humor é aumenta, senão,
-seu nivel de humor sofre alterações, tudo que você faz afeta seu humor.
+Mas a vida nas ruas não é fácil, então fique atento nas necessidades do cão, pois se algum dos status zerarem, você precisará começar o jogo novamente para tentar ser um melhor companheiro para seu amigo.
 
-Fome - Seu nivel de fome, é atrelado ao seu humor e energia, portanto, tente sempre mantelá nos conformes.
+ Humor - O humor é baseado nas escolhas que você ajudará o cão a tomar. O sucesso, e as falhas que acontecem influenciam diretamente, alterando o status.
+ 
+ Fome - O nivel de fome, é atrelado a foma além de outros status. Então fique atento, e cuide para que não fique baixo nenhum deles.
 
-Frio - Seu nivel de frio, é atrelado ao seu humor, um cachorrinho quente é um cachorro feliz :)
+ Frio - Nível de frio, também é modificado conforme determinadas situações, além da queda de temperatura não esqueça que tudo influencia outros status, isso quer dizer: "Um cachorrinho quente é um cachorro feliz."
 
-Energia - Sua energia é seus pontos de ação, todas as suas atividades gastam energia, tente manter sua barriguinha cheia, se sua energia for
-zerada, seu dia encerrará automaticamente.
+ Energia - A energia são os pontos de ação, todas as suas atividades gastam energia, tente manter sua barriguinha cheia, e com status saudaveis. 
 
         ''')
+        print('\nComeçando o Jogo\n')
+        for i in tqdm(range (150)): #cria um indicador de carregamento#
+            sleep(0.0001)
+        
