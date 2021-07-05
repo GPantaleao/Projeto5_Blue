@@ -12,7 +12,7 @@ class Personagem:
     def __str__(self):          #altera os atributos confome necessidade, sendo valores positivos ou negativos#
         return f'''
 
-        Perfil {self.__nome}:
+        Status {self.__nome}:
         ==============================
         |{("Humor - " + str(self.__humor) + "%").center(28)}|   
         |{("Fome - " + str(self.__fome) + "%").center(28)}|   
