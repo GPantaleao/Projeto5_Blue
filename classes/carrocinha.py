@@ -65,7 +65,6 @@ class Carrocinha:
                 personagem.muda_fome(20)
                 personagem.muda_energia(10)
                 personagem.muda_humor(5)
-                relogio.avanca_tempo()
             elif sorteio_carrocinha == 2: #Não conseguiu se esconder
                 print(f'{personagem.nome} não conseguiu se esconder, você pode correr e tentar novamente, lembrando que se sua energia chegar a 0, GAME OVER!')
                 adocao = randint(1,3)
@@ -80,7 +79,6 @@ class Carrocinha:
                             personagem.muda_fome(-10)
                             personagem.muda_energia(-15)
                             personagem.muda_humor(-5)
-                            relogio.avanca_tempo()
                             break
                     else:
                         print("Voce tentou, tentou, tentou se esconder mas não conseguiu, desistiu e foi levado pela carrocinha")

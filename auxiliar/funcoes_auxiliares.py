@@ -1,28 +1,7 @@
 from random import randint
 
-def fase1(relogio, personagem):
-    print(f'São {str(relogio)}, {personagem.nome} acordou num {personagem.lugar}.')
-    print(personagem)
-
-    acao1 = int(input(f'''O que {personagem.nome} vai fazer? 
-
-    1- Procurar comida
-    2- Procurar alguém para brincar
-    3- Procurar um abrigo
-    4- Voltar a dormir
-    '''))
-
-    while acao1 not in [1,2,3,4]:
-        print('Opção inválida.')
-        acao1 = int(input(f'''O que {personagem.nome} vai fazer? 
-
-    1- Procurar comida
-    2- Procurar alguém para brincar
-    3- Procurar um abrigo
-    4- Voltar a dormir
-    '''))
-
-    if acao1 == 1:
+def opcoes_padrao(relogio, personagem, acao):
+    if acao == 1:
         comida = int(input(f'''Onde {personagem.nome} vai procurar comida
         
         1- Nas sobras dos lixos.
@@ -65,7 +44,7 @@ def fase1(relogio, personagem):
                 personagem.muda_humor(-10)
                 print(f'Hoje {personagem.nome} acordou com o pé esquerdo! Apesar de procurar muito pela cidade ele não conseguiu comida. Foi enxotado da frente de vários comércios, inclusive o dono do açougue jogou água nele e o chamou de vira-lata. Se não bastasse uma mulher passou apressada com celular e pisou em sua patinha. Coitado do nosso amigo.')
     
-    elif acao1 == 2:
+    elif acao == 2:
         sorteio_amigo = randint(1,3)
         if sorteio_amigo == 1:
             relogio.avanca_tempo(40)
@@ -95,7 +74,7 @@ def fase1(relogio, personagem):
             personagem.muda_humor(10)
             print(f'Hoje o mar não está para peixe, ou melhor para cachorros...{personagem.nome} procurou nos parques e nos portões das casas, mas não encontrou nenhum amigo... "Talvez seja melhor tentar mais tarde.Talvez ainda estejam dormindo", pensa nosso amigo.')
 
-    elif acao1 == 3:
+    elif acao == 3:
         print(f'{personagem.nome} está se sentindo um pouco cansado, talvez fosse bom procurar por um abrigo para descansar. As ruas podem ser perigosas e frias, se não conseguir um bom lugar para dormir pode ser muito difícil.\n')
         abrigo = randint(1,2)
         if abrigo == 1:
@@ -109,20 +88,8 @@ def fase1(relogio, personagem):
             personagem.muda_humor(-5) 
             print(f'{personagem.nome} já esta acostumado a andar pelos becos a procura de abrigo, mas esta noite em especial está mais difícil, os valentões do bairro vizinho estão por aqui, e com isso os melhores lugares ja estão ocupados."Talvez seja melhor tentar a sorte  mais tarde", pensa nosso amigo. Melhor não arrumar briga. "Tem dias que viver na rua não é fácil", pensa novamente. ')
 
-    elif acao1 == 4:
+    elif acao == 4:
         relogio.avanca_tempo(40)
         personagem.muda_energia(30)
         personagem.muda_fome(-20) 
         print(f'"Hoje o dia está preguiçoso", pensa nosso amigo.Talvez fosse melhor estender mais esse soninho. Zzzzzzzz')
-
-    print(personagem)
-
-
-        
-        
-
-
-
-
-
-    

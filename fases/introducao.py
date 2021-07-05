@@ -3,15 +3,9 @@ class Introducao:
         pass
     def executar(self):
         print('''
-        Tema - Dia de Cão (Trata-se de uma historia sobre o dia a dia de um cachorro de rua)
-
-Parametros Cão (Nome, Humor, Fome, Frio, Energia)
-
-===== ====== ====== ===== ====== ===== ====== ====== ===== ====== ===== ====== ====== ===== ====== ===== ======
-(Enunciado/Regras do jogo)
-
-Você será um cachorrinho de rua, nesta trama seu objetivo é sobreviver e ser adotado enquanto você foge do seu pior vilão...
-a carrocinha, neste jogo você deverá ficar atento a algumas caracteristicas do cão. 
+        Jogo - Dia de Cão 
+Nesta trama seu objetivo é ajudar um cachorro de rua a sobreviver e ser adotado, enquanto foge de um grande inimigo, a carrocinha. Você terá a oportunidade de conhecer o dia de um cão, e ajuda- lo nas melhores escol
+ neste jogo você deverá ficar atento a algumas caracteristicas do cão. 
 
 Humor - Seu humor é baseado no nivel de sucesso referente as suas escolha, se você tiver sucesso seu nivel de humor é aumenta, senão,
 seu nivel de humor sofre alterações, tudo que você faz afeta seu humor.
