@@ -3,7 +3,7 @@ from time import sleep
 
 class Dados:
     def __init__(self):
-        self.caoDado = True
+        self.__caoDado = True
 
     def jogoDado(self, personagem):
 #Listas para cada player, onde é atribuida o dicionario do respectivo player contendo o número do dado
@@ -56,6 +56,14 @@ class Dados:
 
         #Condição que verifica qual player venceu mais rodadas, usando como parametro o dicionario de pontuação total
         if play['Cao'] > play['Carrocinha'] or play['Cao'] == play['Carrocinha']:
-            self.caoDado = True
+            self.__caoDado = True
         else:
-            self.caoDado = False
+            self.__caoDado = False
+
+    def __str__(self):
+        return f'Cao Dado: {self.__caoDado}'
+    
+    @property
+    def caoDado(self):
+        return self.__caoDado
+    

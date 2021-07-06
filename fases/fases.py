@@ -43,14 +43,14 @@ def fase2(relogio, personagem, opcao_escolhida1):
     print(personagem)
     carrocinha = Carrocinha()
     if opcao_escolhida1 != 1:
-        print('[blue]1- Procurar comida[blue]')
+        print('[blue]1- Procurar comida[/blue]')
     if opcao_escolhida1 != 2:
-        print('[blue]2- Procurar alguém para brincar[blue]')
+        print('[blue]2- Procurar alguém para brincar[/blue]')
     if opcao_escolhida1 != 3:
-        print('[blue]3- Procurar um abrigo[blue]')
+        print('[blue]3- Procurar um abrigo[/blue]')
     if opcao_escolhida1 != 4:
-        print('[blue]4- Voltar a dormir[blue]')
-    print('[blue]5- Explorar a região[blue]')
+        print('[blue]4- Voltar a dormir[/blue]')
+    print('[blue]5- Explorar a região[/blue]')
     
     acao2 = int(input('\nQual será sua próxima ação?\n'))
     opcoes_padrao(relogio, personagem, acao2)

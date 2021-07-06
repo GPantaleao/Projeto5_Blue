@@ -3,7 +3,7 @@ from time import sleep
 
 class PePaTe:
     def __init__(self):
-        self.jogadaCao = True
+        self.__jogadaCao = True
 
     def jogopepate(self,personagem):
         pedra = '''  `.--.`                 
@@ -70,21 +70,21 @@ class PePaTe:
                 {pedra}''')
                 print(f'''ESCOLHA DA MAQUINA:
                 {pedra}''')
-                self.jogadaCao = True
+                self.__jogadaCao = True
             elif maquina == 2:
                 sleep(0.3)
                 print(f'''SUA ESCOLHA:
                 {pedra}''')
                 print(f'''ESCOLHA DA MAQUINA:
                 {papel}''')
-                self.jogadaCao = False
+                self.__jogadaCao = False
             else:
                 sleep(0.3)
                 print(f'''SUA ESCOLHA:
                 {pedra}''')
                 print(f'''ESCOLHA DA MAQUINA:
                 {tesoura}''')
-                self.jogadaCao = True
+                self.__jogadaCao = True
 
         if escolha in "PA": #If para Papel
             sleep(0.6)
@@ -101,21 +101,21 @@ class PePaTe:
                 {papel}''')
                 print(f'''ESCOLHA DA MAQUINA:
                 {papel}''')
-                self.jogadaCao = True
+                self.__jogadaCao = True
             elif maquina == 2:
                 sleep(0.3)
                 print(f'''SUA ESCOLHA:
                 {papel}''')
                 print(f'''ESCOLHA DA MAQUINA:
                 {tesoura}''')
-                self.jogadaCao = False
+                self.__jogadaCao = False
             else:
                 sleep(0.3)
                 print(f'''SUA ESCOLHA:
                 {papel}''')
                 print(f'''ESCOLHA DA MAQUINA:
                 {pedra}''')
-                self.jogadaCao = True
+                self.__jogadaCao = True
 
         if escolha in "TE": #If para Tesoura
             sleep(0.6)
@@ -132,18 +132,25 @@ class PePaTe:
                 {tesoura}''')
                 print(f'''ESCOLHA DA MAQUINA:
                 {tesoura}''')
-                self.jogadaCao = True
+                self.__jogadaCao = True
             elif maquina == 2:
                 sleep(0.3)
                 print(f'''SUA ESCOLHA:
                 {tesoura}''')
                 print(f'''ESCOLHA DA MAQUINA:
                 {pedra}''')
-                self.jogadaCao = False
+                self.__jogadaCao = False
             else:
                 sleep(0.3)
                 print(f'''SUA ESCOLHA:
                 {tesoura}''')
                 print(f'''ESCOLHA DA MAQUINA:
                 {papel}''')
-                self.jogadaCao = True
+                self.__jogadaCao = True
+
+    def __str__(self):
+        return f'Jogadas Cao: {self.__jogadaCao}'
+
+    @property
+    def jogadaCao(self):
+        return self.__jogadaCao
