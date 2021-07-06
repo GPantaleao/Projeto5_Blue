@@ -138,6 +138,7 @@ def fase2(relogio, personagem, opcao_escolhida1):
                 personagem.muda_humor(20)
                 personagem.muda_frio(10)
                 print(f'{personagem.nome}, você encotrou um açougue. O dono era muito gentil, porém deixou você ficar com ele apenas durante o dia!')
+                relogio.avanca_tempo(720)
             else:
                 print(f'{personagem.nome}, você encotrou um açougue. Entretanto, o dono ficou incomodado com sua presença e chamou a carrocinha!')
                 carrocinha.carrocinha(relogio, personagem)
