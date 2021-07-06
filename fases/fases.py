@@ -144,11 +144,3 @@ def fase2(relogio, personagem, opcao_escolhida1):
                 carrocinha.carrocinha(relogio, personagem)
                 
     fase1(relogio, personagem)
-        
-        
-
-
-
-
-
-    
