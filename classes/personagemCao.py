@@ -1,4 +1,5 @@
 from classes.relogio import Relogio
+from sys import exit
 
 class Personagem:                 
     def __init__(self, nome):
@@ -23,12 +24,26 @@ class Personagem:
 
     def muda_humor(self,humor_novo):
         self.__humor += humor_novo
+        if self.__humor >= 100:
+            self.__humor = 100
+        elif self.__humor <= 0:
+            exit('Humor chegou a Zero. GAME OVER')
+
     
     def muda_fome(self,fome_nova):
         self.__fome += fome_nova
+        if self.__fome >= 100:
+            self.__fome = 100
+        elif self.__fome <= 0:
+            exit('Fome chegou a Zero. GAME OVER')
 
     def muda_frio(self,frio_novo):
         self.__frio =+ frio_novo
+        if self.__frio >= 100:
+            self.__frio = 100
+        elif self.__frio <= 0:
+            exit('Frio chegou a Zero. GAME OVER')
+
 
     def muda_energia(self,nova_energia):
        self.__energia += nova_energia
