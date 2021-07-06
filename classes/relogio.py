@@ -12,7 +12,9 @@ class Relogio:
         while(self.__minutos >= 60):   #tira dos minutos rodados o valor 60, e adicionar +1 na hora, para fazer o relogio funcionar# 
             self.__minutos -= 60
             self.__horas += 1
-
+        while self.__horas >= 24: 
+            self.__horas -= 24
+            self.__dia +=1
     def avanca_dia(self): #avança um dia, e começa o novo dia no mesmo horario do dia anterior#
         self.__dia +=1
         self.__horas = 8
