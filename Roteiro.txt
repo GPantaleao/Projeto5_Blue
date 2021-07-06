@@ -21,11 +21,17 @@ Energia - Sua energia é seus pontos de ação, todas as suas atividades gastam 
 zerada, seu dia encerrará automaticamente.
 
 ===== ====== ====== ===== ====== ===== ====== ====== ===== ====== ===== ====== ====== ===== ====== ===== ======
+
+
+
 (Jogo)  @ - Conseguiu na primeira tentativa
 	$ - Conseguiu na segunda tentativa
 	! - Não Conseguiu
 	TP - Tempo para cada ação
+
 	CHANCES DE ADOÇÃO APÓS O DIA 2
+
+
 "São 8AM(horario), voce esta em um terreno baldio, qual sera sua ação:"
 ==============
 Humor - Feliz |   1 - Procurar comida
@@ -37,18 +43,27 @@ Energia - 50  |   4 - Voltar a dormir
 OP1 -   1 - Procurar no lixo @ - (20 Fome 10 Energia 5 Humor) $ - (10 Fome 5 Energia 5 Humor) ! - (15 Energia -5 Humor) TP(40 min)
 	
 	2 - Procurar alguem para ti alimentar @ - (30 Fome 20 Energia 10 Humor) $ - (20 Fome 10 Energia 5 Humor) ! - (20 Energia -10 Humor) TP(60 min)
+
 ===== ====== ====== ===== ====== ===== ====== ====== ===== ====== ===== ====== ====== ===== ====== ===== ======
 OP2 -  @ Voce encontrou um amigo de rua - (-5 Fome -10 Energia 20 Humor) TP(40)
 $ Voce encontrou um cachorro domestico - (@ Ele brincou -5 Fome -10 Energia 20 Humor)(30) (! A dona nao deixou -25 Humor) TP(20)
 ! - (-5 Fome -10 Energia -10 Humor) TP(20)
+
+
 ===== ====== ====== ===== ====== ===== ====== ====== ===== ====== ===== ====== ====== ===== ====== ===== ======
+
+
 OP3 - @ - (-10 Energia 15 Humor) ! - (-15 Energia -5 Humor) TP(40 min)
 ===== ====== ====== ===== ====== ===== ====== ====== ===== ====== ===== ====== ====== ===== ====== ===== ======	
+
 
 OP5 -  Dormir (30 Energia -20 Fome)(12h) Se o dia chegar a 12 horas adicionar -10 Frio a cada ação (Sem ser dormir em abrigo)
 Se o frio chegar em 70 a energia maxima é diminuida em 30
 ===== ====== ====== ===== ====== ===== ====== ====== ===== ====== ===== ====== ====== ===== ====== ===== ======
  
+
+
+
 "São (horario), voce esta em um (local), qual sera sua ação:" (Sem as opções escolhidas)
 
 ==============
@@ -71,6 +86,8 @@ OP4 -   1 - Você encontrou um parque, Voce quer ir? [S/N]
 		2 - Procurar companhia
   		3 - Procurar um abrigo
 ===== ====== ====== ===== ====== ===== ====== ====== ===== ====== ===== ====== ====== ===== ====== ===== ======
+
+
 OP1 - Na sua procura voce encontra um cachorro hostil 
 1 - Fugir 	@ - (-10 Energia 5 Humor) ! - (-15 Energia -10 Humor)(80)
 2 - Esconder 	@ - (-10 Energia 5 Humor) ! - (-15 Energia -10 Humor)(80)
@@ -87,6 +104,8 @@ OP1 - Na sua procura voce encontra um cachorro hostil
 		2 - Procurar companhia
   		3 - Procurar um abrigo
 ===== ====== ====== ===== ====== ===== ====== ====== ===== ====== ===== ====== ====== ===== ====== ===== ======
+
+
 OP2 - Voce encontrou a carrocinha
 1 - Fugir 	@ - (-20 Energia -10 Fome 5 Humor) ! - (-15 Energia -10 Humor)(80)
 2 - Esconder 	@ - (-10 Energia -5 Humor) ! - (-15 Energia -10 Humor)(80)
@@ -116,6 +135,8 @@ OP2 - @ Você encontrou um abrigo e dormiu(-20 Fome +30 Energia +30 Frio +10 Hum
 se for "S" - Energia -20 (Até achar um abrigo)(50min)
 se for "N" - (Energia +30 Frio -20 Humor -10 Fome -20)(Inicia o dia2)
 ===== ====== ====== ===== ====== ===== ====== ====== ===== ====== ===== ====== ====== ===== ====== ===== ======
+
+
 OP3 - @ Você encotrou um padaria, o dono era muito gentil e deixou você ficar com ele(+30Energia +30Fome +30Humor +10Frio)(Inicia o Dia 2) 
 após o dia 2 você tera a chance de ser adotado por ele 
 $ Você encotrou um padaria, o dono era muito gentil porém ele deixou você ficar com ele apenas 
