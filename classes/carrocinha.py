@@ -39,6 +39,7 @@ class Carrocinha:
                             break
                     else:
                         print("Voce desistiu de fugir e foi levado pela carrocinha")
+                        personagem.muda_lugar('carrocinha')
                         if relogio.dia == 1: #Se o dia for igual a 1 o cachorro nao tem a opção de ser adotado (apenas a partir do dia 2)
                             personagem.muda_fome(-10)
                             personagem.muda_energia(-25)
@@ -82,6 +83,7 @@ class Carrocinha:
                             break
                     else:
                         print("Voce tentou, tentou, tentou se esconder mas não conseguiu, desistiu e foi levado pela carrocinha")
+                        personagem.muda_lugar('carrocinha')
                         if relogio.dia == 1: #Se o dia for igual a 1 o cachorro nao tem a opção de ser adotado (apenas a partir do dia 2)
                             personagem.muda_fome(-10)
                             personagem.muda_energia(-25)
