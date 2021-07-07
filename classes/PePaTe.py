@@ -147,7 +147,8 @@ class PePaTe:
                 print(f'''ESCOLHA DA MAQUINA:
                 {papel}''')
                 self.__jogadaCao = True
-
+        if escolha not in "PEPATE":
+            print("OPÇÃO INVALIDA")
     def __str__(self):
         return f'Jogadas Cao: {self.__jogadaCao}'
 
