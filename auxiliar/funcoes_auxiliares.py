@@ -130,24 +130,24 @@ def noite(personagem, relogio):
         comida_noite = randint(1, 3)
 
         if comida_noite == 1:
-            personagem.muda_fome(-10)
-            personagem.muda_energia(-25)
-            personagem.muda_humor(-20)
-            personagem.muda_frio(-20)
+            personagem.muda_fome(15)
+            personagem.muda_energia(15)
+            personagem.muda_humor(10)
+            personagem.muda_frio(-5)
             relogio.avanca_tempo(50)
             print(f'{personagem.nome}, conseguiu comida de primeira.')
         elif comida_noite == 2:
-            personagem.muda_fome(-10)
-            personagem.muda_energia(-25)
-            personagem.muda_humor(-20)
-            personagem.muda_frio(-20)
+            personagem.muda_fome(10)
+            personagem.muda_energia(10)
+            personagem.muda_humor(5)
+            personagem.muda_frio(-5)
             relogio.avanca_tempo(50)
             print(f'{personagem.nome}, conseguiu comida de segunda vez.')
         else:
             personagem.muda_fome(-10)
-            personagem.muda_energia(-25)
-            personagem.muda_humor(-20)
-            personagem.muda_frio(-20)
+            personagem.muda_energia(-10)
+            personagem.muda_humor(-10)
+            personagem.muda_frio(-5)
             relogio.avanca_tempo(50)
             print(f'{personagem.nome}, não conseguiu comida.')
     elif fase_noite == 2:
@@ -162,18 +162,18 @@ def noite(personagem, relogio):
                 print(f'{personagem.nome}, conseguiu abrigo de primeira.')
                 break
             elif abrigo_noite == 2:
-                personagem.muda_fome(-10)
-                personagem.muda_energia(-25)
-                personagem.muda_humor(-20)
-                personagem.muda_frio(-20)
+                personagem.muda_fome(15)
+                personagem.muda_energia(15)
+                personagem.muda_humor(10)
+                personagem.muda_frio(-5)
                 relogio.avanca_tempo(50)
                 print(f'{personagem.nome}, conseguiu abrigo de segunda vez.')
                 break
             else:
-                personagem.muda_fome(-10)
-                personagem.muda_energia(-25)
-                personagem.muda_humor(-20)
-                personagem.muda_frio(-20)
+                personagem.muda_fome(10)
+                personagem.muda_energia(10)
+                personagem.muda_humor(10)
+                personagem.muda_frio(-5)
                 relogio.avanca_tempo(50)
                 print(f'{personagem.nome}, não conseguiu abrigo.')
 
@@ -184,20 +184,21 @@ def noite(personagem, relogio):
                     abrigo_noite = randint(1, 2)
                     if abrigo_noite == 1:
                         print('Você tentou e não conseguiu')
-                        personagem.muda_energia(-25)
+                        personagem.muda_energia(-5)
+                        personagem.muda_frio(-5)
                     else:
                         print('Você conseguiu achar um abrigo.')
-                        personagem.muda_fome(-10)
-                        personagem.muda_energia(-25)
-                        personagem.muda_humor(-20)
-                        personagem.muda_frio(-20)
+                        personagem.muda_fome(5)
+                        personagem.muda_energia(15)
+                        personagem.muda_humor(15)
+                        personagem.muda_frio(5)
                         relogio.avanca_dia()
                         break
                 else:
                     print('Você dormiu na rua.')
                     personagem.muda_fome(-10)
-                    personagem.muda_energia(-25)
-                    personagem.muda_humor(-20)
-                    personagem.muda_frio(-20)
+                    personagem.muda_energia(-10)
+                    personagem.muda_humor(-10)
+                    personagem.muda_frio(-10)
                     relogio.avanca_dia()
                     break
