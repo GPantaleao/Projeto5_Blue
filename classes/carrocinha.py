@@ -53,9 +53,9 @@ class Carrocinha:
                                 break
                             else:
                                 personagem.muda_fome(-10)
-                                personagem.muda_energia(-25)
-                                personagem.muda_humor(-20)
-                                personagem.muda_frio(-20)
+                                personagem.muda_energia(-10)
+                                personagem.muda_humor(-10)
+                                personagem.muda_frio(-5)
                                 relogio.avanca_tempo(720) #12h após sair da carrocinha 
                                 break
         elif escolha == 2:#Escolha Esconder
@@ -63,7 +63,7 @@ class Carrocinha:
             if sorteio_carrocinha == 1:#Conseguiu se esconder
                 relogio.avanca_tempo(80)
                 print(f'{personagem.nome} conseguiu se esconder, porém se sente muito cansado, decidiu se esconder e descansar até a situação se acalmar')
-                personagem.muda_fome(20)
+                personagem.muda_fome(10)
                 personagem.muda_energia(10)
                 personagem.muda_humor(5)
             elif sorteio_carrocinha == 2: #Não conseguiu se esconder
@@ -86,9 +86,9 @@ class Carrocinha:
                         personagem.muda_lugar('carrocinha')
                         if relogio.dia == 1: #Se o dia for igual a 1 o cachorro nao tem a opção de ser adotado (apenas a partir do dia 2)
                             personagem.muda_fome(-10)
-                            personagem.muda_energia(-25)
-                            personagem.muda_humor(-20)
-                            personagem.muda_frio(-20)
+                            personagem.muda_energia(-10)
+                            personagem.muda_humor(-10)
+                            personagem.muda_frio(-5)
                             relogio.avanca_tempo(720) #12h após sair da carrocinha
                             break
                         if relogio.dia > 1: #Depois do dia 1 o cachorro pode ser adotado
