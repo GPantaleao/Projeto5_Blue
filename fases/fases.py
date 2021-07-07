@@ -97,7 +97,6 @@ def fase2(relogio, personagem, opcao_escolhida1):
                 personagem.muda_humor(-15)
                 print(f'{personagem.nome} corre em sentido ao centro na expectativa de explorar outros lugares, parando entre uma moita e outra para fazer xixi ele(a) chega a um grandioso prédio onde de cara é barrado(a) por seguranças, dizem que ele(a) não pode entrar no Shopping, e {personagem.nome} não tem nem ideia do que eles estão falando, "O que será esse tal de shopping?" pensa nosso(a) amigo(a). Entretanto mal dá tempo de admirar, pois os seguranças o(a) espantam para a rua, e bem nessa hora aparece a carrocinha.')
                 carrocinha.carrocinha(relogio, personagem)
-                relogio.avanca_dia()
         else:
             personagem.muda_lugar("padaria")
             personagem.muda_fome(10)
