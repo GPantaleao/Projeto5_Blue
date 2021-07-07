@@ -50,7 +50,7 @@ class Personagem:
         if self.__energia >= 100:
             self.__energia = 100
         elif self.__energia <= 0:
-            exit('Frio chegou a Zero. GAME OVER')
+            exit('Energia chegou a Zero. GAME OVER')
 
     def muda_lugar(self,novo_lugar):
        self.__lugar = novo_lugar 

@@ -7,7 +7,7 @@ from fases.fases import fase1
 
 if __name__ == '__main__':
     intro = Introducao()
-    # intro.executar()   ####NÃO ESQUECER DE TIRAR DE COMENTARIO DEPOIS
+    # intro.executar()   ###NÃO ESQUECER DE TIRAR DE COMENTARIO DEPOIS
     relogio = Relogio()
     personagem = Personagem('Gaara')
     carrocinha = Carrocinha()
