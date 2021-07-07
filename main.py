@@ -5,6 +5,7 @@ from classes.carrocinha import Carrocinha
 from fases.introducao import Introducao
 from fases.fases import fase1
 
+
 if __name__ == '__main__':
     intro = Introducao()
     # intro.executar()   ####NÃO ESQUECER DE TIRAR DE COMENTARIO DEPOIS

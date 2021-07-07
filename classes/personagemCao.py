@@ -1,5 +1,19 @@
 from classes.relogio import Relogio
 from sys import exit
+from fases.fases import fase1
+from classes.carrocinha import Carrocinha
+
+def gameOver():
+    print('Game Over!')
+    reiniciar = input('Gostaria de jogar novamente (s/n)? ')
+    if reiniciar == 's':
+        relogio = Relogio()
+        personagem = Personagem('Gaara')
+        carrocinha = Carrocinha()
+        fase1(relogio, personagem)
+    else:
+        print('Obrigado por jogar!')
+        exit()
 
 class Personagem:                 
     def __init__(self, nome):
@@ -27,7 +41,8 @@ class Personagem:
         if self.__humor >= 100:
             self.__humor = 100
         elif self.__humor <= 0:
-            exit('Humor chegou a Zero. GAME OVER')
+            print('Humor chegou a Zero.')
+            gameOver()
 
     
     def muda_fome(self,fome_nova):
@@ -35,18 +50,25 @@ class Personagem:
         if self.__fome >= 100:
             self.__fome = 100
         elif self.__fome <= 0:
-            exit('Fome chegou a Zero. GAME OVER')
+            print('Fome chegou a Zero.')
+            gameOver()
 
     def muda_frio(self,frio_novo):
         self.__frio =+ frio_novo
         if self.__frio >= 100:
             self.__frio = 100
         elif self.__frio <= 0:
-            exit('Frio chegou a Zero. GAME OVER')
+            print('Frio chegou a Zero.')
+            gameOver()
 
 
     def muda_energia(self,nova_energia):
-       self.__energia += nova_energia
+        self.__energia += nova_energia
+        if self.__energia >= 100:
+            self.__energia = 100
+        elif self.__energia <= 0:
+            print('Energia chegou a Zero.')
+            gameOver()
 
     def muda_lugar(self,novo_lugar):
        self.__lugar = novo_lugar 
