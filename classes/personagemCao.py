@@ -8,8 +8,8 @@ def gameOver():
     reiniciar = input('Gostaria de jogar novamente (s/n)? ')
     if reiniciar == 's':
         relogio = Relogio()
-        personagem = Personagem('Gaara')
-        carrocinha = Carrocinha()
+        nome = input('Digite o nome do seu cãozinho: '). title()
+        personagem = Personagem(nome)
         fase1(relogio, personagem)
     else:
         print('Obrigado por jogar!')
@@ -54,7 +54,7 @@ class Personagem:
             gameOver()
 
     def muda_frio(self,frio_novo):
-        self.__frio =+ frio_novo
+        self.__frio += frio_novo
         if self.__frio >= 100:
             self.__frio = 100
         elif self.__frio <= 0:

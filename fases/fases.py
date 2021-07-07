@@ -73,6 +73,9 @@ def fase2(relogio, personagem, opcao_escolhida1):
                 print(f'{personagem.nome} adora parques, fica correndo entre os arbustos e se esfregando na grama ele(a) brinca feliz, e acaba até se esquecendo da vida, e da tristeza de sempre estar sozinho(a). E no meio de tanta diversão não nota a presença de um cachorro hostil que o(a) observava, e que sem ao menos dizer uma palavra corre para atacar {personagem.nome}, que consegue se desvencilhar e corre para se esconder nos arbustos.') 
                 if relogio.dia >= 2:
                     print(f'{personagem.nome} fica escondido até perceber que está novamente seguro, entretanto quando tenta sair dos arbustos sente uma mão lhe segurando, com cuidado uma mulher lhe pega no colo e fala baixinho: "calma amiguinho(a) agora está tudo bem, eu vi o que aconteceu, ele não vai te morder, eu vou te proteger", e abraça {personagem.nome} carinhosamente, e segue em direção a saída do parque. {personagem.nome} nem pode acreditar no que está acontecendo, agora enfim vai ter oportunidade de ter um lar e uma família. ')
+                    sleep(1)
+                    print('NÃO COMPRE, ADOTE!')
+                    exit()
             else:
                 personagem.muda_fome(5)
                 personagem.muda_energia(5)
@@ -95,6 +98,9 @@ def fase2(relogio, personagem, opcao_escolhida1):
                 print(f'Entre as ruas movimentadas da cidade {personagem.nome} se assusta coma quantidade de carros que encontra, e acaba quase sendo atropelado(a), não é fácil caminhar entre tantos carros e pessoas. Entretanto {personagem.nome} avista um grande prédio onde lê a palavra "Shopping", sem ter ideia do que é ele(a) se aproxima e logo é barrado(a) pelos seguranças. Mas perto da porta uma família está parada brincando com bolas e nosso(a) amigo(a) se distrai com a cena. Uma das bolas cai perto dele e no mesmo momento a família entra num carro e deixam a bola para trás. {personagem.nome} se aproxima e pega a bola, joga para o alto e volta a pegar novamente, brincando feliz, com seu rabo em ritmo frenético. Entretanto em uma das jogadas a bola cai e sai rolando para longe e acaba entrando no bueiro, infelizmete não se tem nada o que nosso(a) amigo(a) possa fazer para recupera-la. "Mas a brincadeira foi boa, foi um dia de sorte", pensa nossoS(a) amigo(a). ')
                 if relogio.dia >= 2:
                     print(f'{personagem.nome} decide voltar tranquilamente depois de toda a brincadeira, entretanto um carro para e desce uma família, sem entender um homem se aproxima e o(a) pega no colo, e nosso amigo percebe que é a família que deixou a bola, ele tenta desesperamente fugir pensando que eles vão castiga-lo por causa da bola que ele perdeu, mas o homem aos poucos tenta fazer um carinho e acalma-lo(a), em seguida o coloca no banco de tras juntos com as crianças e diz: "Calma aminguinho(a) vamos para casa, agora esta tudo bem", pela primeira vez em muito tempo ele se sentiu seguro, fechou os olhos e relaxou no banco do carro ')
+                    sleep(1)
+                    print('NÃO COMPRE, ADOTE!')
+                    exit()
             else:
                 personagem.muda_fome(5)
                 personagem.muda_energia(-5)
@@ -135,6 +141,8 @@ def fase2(relogio, personagem, opcao_escolhida1):
                     adocao_acougue = randint(1,4)
                     if adocao_acougue != 1:
                         print(f'{personagem.nome}, fica parado admirando as carnes na vitrine do açougue, com a boca salivando de tamanha a vontade, entretanto não se atreve a entrar, ja esta cansado (a) de mais para ter que fugir quando for enxotado. Ele(a) fica parado(a) ali observando e pensando que a vida as vezes é muito difícil, e mal percebe um funcionário do açougue se aproximando com um osso gigante, e carinhosamente entrega a {personagem.nome} que começa a roer ali mesmo. Em seguida o tal funcionário se aproxima e senta ao lado do nosso(a) amigo(a) e começa a passar a mão na sua cabeça, bem devarainho, a tempos {personagem.nome} não se sente tão acolhido e se se acomoda mais perto do homem, que o pego e o leva para a parte de tras do açougue. {personagem.nome} não entende muito bem o que está acontecendo, em seguida o homem lhe entrega um cobertor e um potinho com água, lhe faz um afago e diz:"Acho que sua vida não é muito fácil amiguinho(a), as vezes não é a vida na rua é difícil e solitária...Agora você pode viver aqui porque você finalmente encontrou um lar, a partir de hoje eu sou sua companhia e você a minha"')
+                        sleep(1)
+                        print('NÃO COMPRE, ADOTE!')
                         exit()
                     else:
                         print(f'{personagem.nome}, você encotrou um açougue. O dono era muito gentil e deixou você no açougue até o proximo dia!')

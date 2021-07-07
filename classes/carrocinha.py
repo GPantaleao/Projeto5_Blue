@@ -39,8 +39,7 @@ class Carrocinha:
                         pepate.jogopepate(personagem)
                         if pepate.jogadaCao == True:
                             relogio.avanca_tempo(80)
-                            print(
-                                f'Deu certo!!! Você conseguiu criar uma distração e ajudar{personagem.nome}. E agora nosso(a) amigo(a) foge o mais rápido do que pode. Ele(a) precisa se esconder e se acalmar depois desse susto')
+                            print(f'Deu certo!!! Você conseguiu criar uma distração e ajudar {personagem.nome}. E agora nosso(a) amigo(a) foge o mais rápido do que pode. Ele(a) precisa se esconder e se acalmar depois desse susto')
                             personagem.muda_fome(-10)
                             personagem.muda_energia(-15)
                             personagem.muda_humor(-5)
@@ -55,6 +54,9 @@ class Carrocinha:
                             personagem.muda_humor(-10)
                             personagem.muda_frio(-5)
                             relogio.avanca_tempo(720)
+                            print(f'''As horas se arrastam e {personagem.nome} não tem noção alguma de quanto tempo já está preso. O medo toma conta do seu coração, preso naquele lugar pequeno e frio ja não sabe o que pode fazer para fugir. Olha para os lados e ve gaiolas e mais gaiolas empilhadas cheias de cachorros, de varias tamanhos, alguns velhos, outros doentes, mas também alguns pequenos filhotes que parecm ter meses de vida.{personagem.nome} vendo isso pensa, " como pode existir um lugar tão triste como esse?" 
+                                Os minutos continuam a passar se transformando em horas e mais horas, algumas vezes os homens uniformizados abrem as gaiolas para limpar as sujeiras e levar um pouco de ração seca, que nem se da vontade de comer, e é num desses momentos em que nosso amigo(a) ve uma oportunidade para fugir...
+                                O homem uniformizado entra pela porta e a deixa encostada, vai limpando as gaiolas e colocando as comidas, quando tira o jornal sujo da gaiolo e se vira para jogar no lixo, {personagem.nome} aproveita e pula de dentro da gaiola e corre para a porta a fora. Começa uma gritaria e correria atras, mas nosso amigo corre desesperamente em busca da liberdade.''') 
                             break
                         if relogio.dia > 1: #Depois do dia 1 o cachorro pode ser adotado
                             if adocao != 1:
@@ -64,6 +66,8 @@ class Carrocinha:
                                 sleep(1)
                                 print(f'''Logons minutos se passam e novamente a porta se abre,{personagem.nome} sem nenhuma emoção é arrastado para fora de sua jaula e é levado para fora da sala, vários olhinhos o acampanham até saída, e a porta se fecha.
                                 Quando {personagem.nome} abre os olhos esta numa sala clara e o mesmo rapaz que lhe deu a coxinha estava lá, pega sua coleira e diz "Eu spu Pedro e agora você será parte da minha família, estou de adotando, se prepare porque agora temos que lhe dar um novo nome.''')
+                                sleep(1)
+                                print('NÃO COMPRE, ADOTE!')
                                 exit()
                             else:
                                 print(f'''As horas se arrastam e {personagem.nome} não tem noção alguma de quanto tempo já está preso. O medo toma conta do seu coração, preso naquele lugar pequeno e frio ja não sabe o que pode fazer para fugir. Olha para os lados e ve gaiolas e mais gaiolas empilhadas cheias de cachorros, de varias tamanhos, alguns velhos, outros doentes, mas também alguns pequenos filhotes que parecm ter meses de vida.{personagem.nome} vendo isso pensa, " como pode existir um lugar tão triste como esse?" 
@@ -89,7 +93,7 @@ class Carrocinha:
                 sleep(1)
                 adocao = randint(1,4)
                 while True:
-                    teste = str(input("f'Agora você tem a chance de ajudar nosso(a) amigo(a) criando uma distração para ele fugir. Você deseja tentar ajudar{personagem.nome} a fugir para se  esconder? [S/N]: ")).strip().upper()[0]
+                    teste = str(input(f'Agora você tem a chance de ajudar nosso(a) amigo(a) criando uma distração para ele fugir. Você deseja tentar ajudar {personagem.nome} a fugir para se  esconder? [S/N]: ')).strip().upper()[0]
                     if teste == "S": 
                         dado.jogoDado(personagem)#Jogo do Dado atribuida a opção Esconder
                         if dado.caoDado == True:
@@ -100,7 +104,7 @@ class Carrocinha:
                             personagem.muda_humor(-5)
                             break
                     else:
-                        print('Apesar de tudo {personagem.nome} não consegue fugir da perseguição dos homens uniformizados e novamente é preso na gaiola fria da carrocinha')
+                        print(f'Apesar de tudo {personagem.nome} não consegue fugir da perseguição dos homens uniformizados e novamente é preso na gaiola fria da carrocinha')
                         personagem.muda_lugar('carrocinha')
                         if relogio.dia == 1: #Se o dia for igual a 1 o cachorro nao tem a opção de ser adotado (apenas a partir do dia 2)
                             personagem.muda_fome(-10)
@@ -118,6 +122,8 @@ class Carrocinha:
                                 print(f'Mais algum tempo passa e mais tres pessoas entram nas salas, algumas tentam passar a mão nos cachorros pela gaiola outras chamam, "pequeno vem aqui, toto olha aqui", {personagem.nome} não entende o que esta acontecendo. Uma menina se aproxima da gaiola e o(a) chama, "Vem aqui", um pouco receioso(a) {personagem.nome} se aproxima e cheira sua mão, mas a menina é puxada para longe da gaiola e a porta se fecha novamente. Mais uam vez nosso(a) amigo se encontra sozinho(a) e triste.')
                                 sleep(1)
                                 print(f' Mais uma vez a porta se abre e uma pessoa uniformizada entra e leva {personagem.nome} para fora da sala, la ele ve as pessoas que a pouco estavam olhando as gaiolas inclusive a menina que ele cheirou a mão, que corre em sua direção e o abraça dizendo que agora é parte da família.')
+                                sleep(1)
+                                print('NÃO COMPRE, ADOTE!')
                                 exit()
                             else:
                                 personagem.muda_fome(-10)
