@@ -64,7 +64,7 @@ def opcoes_padrao(relogio, personagem, acao):
         elif sorteio_amigo == 2:
             personagem.muda_lugar("parque")
             print(f'Andando pela cidade {personagem.nome} encontra um parque, e acredita ser um ótimo lugar para encontrar um novo amigo. Lá ele vê uma mulher passeando com uma cachorrinha, e analisa se pode ou não se aproximar...."Humm pensando bem essa não é uma boa idéia, elas parecem ser muito metidas", pensa nosso(a) amigo(a). Enfim avista um casal com um cachorrinho jovem de porte médio, pelos reluzentes ao sol, ta aí a oportunidade. \n')
-            dono = randint (1,2)
+            dono = randint(1,2)
             if dono == 1:
                 relogio.avanca_tempo(30)
                 personagem.muda_fome(5)
@@ -93,11 +93,11 @@ def opcoes_padrao(relogio, personagem, acao):
             personagem.muda_energia(-10)
             personagem.muda_humor(15) 
             print(f'{personagem.nome} já esta acostumado(a) a andar pelos becos a procura de abrigo, mas está cada vez mais difícil. Alguns valentões roubam os melhores lugares, e não é bom arrumar brigas na rua, porque se você se machucar ninguém ajuda. {personagem.nome} sempre se lembra de um velho amigo, Bandite, certe vez, ele não quis ceder seu abrigo e apanhou de dois valentões, ele ficou sem andar por dois dias, até que uma tia veio e o levou de carro, nunca mais se teve notícias do pobre Bandite. Mas hoje é o dia de sorte de nosso(a) amigo(a), ele encontra abriga debaixo de um velho trem abandonado, hoje ele vai poder ter um soninho tranquilo') 
-            personagem.muda_lugar("trem abandonado")  
+            personagem.muda_lugar("trem abandonado")
         else:
             relogio.avanca_tempo(40)
             personagem.muda_energia(-15)
-            personagem.muda_humor(-5) 
+            personagem.muda_humor(-5)
             print(f'{personagem.nome} já esta acostumado(a) a andar pelos becos a procura de abrigo, mas esta noite em especial está mais difícil, os valentões do bairro vizinho estão por aqui, e com isso os melhores lugares ja estão ocupados."Talvez seja melhor tentar a sorte mais tarde", pensa nosso(a) amigo(a). Melhor não arrumar briga. "Tem dias que viver na rua não é fácil", pensa novamente. ')
             personagem.muda_lugar("beco")
 
@@ -107,7 +107,97 @@ def opcoes_padrao(relogio, personagem, acao):
         personagem.muda_fome(-10)
         print(f'"Hoje o dia está preguiçoso", pensa nosso(a) amigo(a).Talvez fosse melhor estender mais esse soninho. Zzzzzzzz')
 
-def print_delay(text, delay = 0.01):
+
+def print_delay(text, delay=0.01):
     for n in text:
         print(n, end='')
         sleep(delay)
+
+
+def noite(personagem, relogio):
+    print('Você conseguiu fugir')
+
+    print(
+        f'São {str(relogio)}, do {relogio.dia}° dia, {personagem.nome} encontra-se em um {personagem.lugar}.')
+    print(personagem)
+    sleep(1)
+    fase_noite = int(Prompt.ask('''
+                           1 - Procurar comida
+                           2 - Procurar abrigo
+                           '''))
+
+    if fase_noite == 1:
+        comida_noite = randint(1, 3)
+
+        if comida_noite == 1:
+            personagem.muda_fome(-10)
+            personagem.muda_energia(-25)
+            personagem.muda_humor(-20)
+            personagem.muda_frio(-20)
+            relogio.avanca_tempo(50)
+            print(f'{personagem.nome}, conseguiu comida de primeira.')
+        elif comida_noite == 2:
+            personagem.muda_fome(-10)
+            personagem.muda_energia(-25)
+            personagem.muda_humor(-20)
+            personagem.muda_frio(-20)
+            relogio.avanca_tempo(50)
+            print(f'{personagem.nome}, conseguiu comida de segunda vez.')
+        else:
+            personagem.muda_fome(-10)
+            personagem.muda_energia(-25)
+            personagem.muda_humor(-20)
+            personagem.muda_frio(-20)
+            relogio.avanca_tempo(50)
+            print(f'{personagem.nome}, não conseguiu comida.')
+    elif fase_noite == 2:
+        abrigo_noite = randint(1, 3)
+        while True:
+            if abrigo_noite == 1:
+                personagem.muda_fome(-10)
+                personagem.muda_energia(-25)
+                personagem.muda_humor(-20)
+                personagem.muda_frio(-20)
+                relogio.avanca_tempo(50)
+                print(f'{personagem.nome}, conseguiu abrigo de primeira.')
+                break
+            elif abrigo_noite == 2:
+                personagem.muda_fome(-10)
+                personagem.muda_energia(-25)
+                personagem.muda_humor(-20)
+                personagem.muda_frio(-20)
+                relogio.avanca_tempo(50)
+                print(f'{personagem.nome}, conseguiu abrigo de segunda vez.')
+                break
+            else:
+                personagem.muda_fome(-10)
+                personagem.muda_energia(-25)
+                personagem.muda_humor(-20)
+                personagem.muda_frio(-20)
+                relogio.avanca_tempo(50)
+                print(f'{personagem.nome}, não conseguiu abrigo.')
+
+                opcao = input('''
+                                Deseja continuar procurando ou dormir na rua [S/N]
+                                ''').upper().split()[0]
+                if opcao == 'S':
+                    abrigo_noite = randint(1, 2)
+                    if abrigo_noite == 1:
+                        print('Você tentou e não conseguiu')
+                        personagem.muda_energia(-25)
+                    else:
+                        print('Você conseguiu achar um abrigo.')
+                        personagem.muda_fome(-10)
+                        personagem.muda_energia(-25)
+                        personagem.muda_humor(-20)
+                        personagem.muda_frio(-20)
+                        relogio.avanca_dia()
+                        break
+                else:
+                    print('Você dormiu na rua.')
+                    personagem.muda_fome(-10)
+                    personagem.muda_energia(-25)
+                    personagem.muda_humor(-20)
+                    personagem.muda_frio(-20)
+                    relogio.avanca_dia()
+                    break
