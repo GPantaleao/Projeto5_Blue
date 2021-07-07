@@ -90,7 +90,6 @@ def opcoes_padrao(relogio, personagem, acao):
         abrigo = randint(1,2)
         if abrigo == 1:
             relogio.avanca_tempo(120)
-<<<<<<< HEAD
             personagem.muda_energia(-10)
             personagem.muda_humor(15) 
             print(f'{personagem.nome} já esta acostumado(a) a andar pelos becos a procura de abrigo, mas está cada vez mais difícil. Alguns valentões roubam os melhores lugares, e não é bom arrumar brigas na rua, porque se você se machucar ninguém ajuda. {personagem.nome} sempre se lembra de um velho amigo, Bandite, certe vez, ele não quis ceder seu abrigo e apanhou de dois valentões, ele ficou sem andar por dois dias, até que uma tia veio e o levou de carro, nunca mais se teve notícias do pobre Bandite. Mas hoje é o dia de sorte de nosso(a) amigo(a), ele encontra abriga debaixo de um velho trem abandonado, hoje ele vai poder ter um soninho tranquilo') 
@@ -99,125 +98,16 @@ def opcoes_padrao(relogio, personagem, acao):
             relogio.avanca_tempo(40)
             personagem.muda_energia(-15)
             personagem.muda_humor(-5) 
-=======
-            personagem.muda_energia(10)
-            personagem.muda_humor(15)
-            print(f'{personagem.nome} já esta acostumado(a) a andar pelos becos a procura de abrigo, mas está cada vez mais difícil. Alguns valentões roubam os melhores lugares, e não é bom arrumar brigas na rua, porque se você se machucar ninguém ajuda. {personagem.nome} sempre se lembra de um velho amigo, Bandite, certe vez, ele não quis ceder seu abrigo e apanhou de dois valentões, ele ficou sem andar por dois dias, até que uma tia veio e o levou de carro, nunca mais se teve notícias do pobre Bandite. Mas hoje é o dia de sorte de nosso(a) amigo(a), ele encontra abriga debaixo de um velho trem abandonado, hoje ele vai poder ter um soninho tranquilo')
-            personagem.muda_lugar("trem abandonado")
-        else:
-            relogio.avanca_tempo(40)
-            personagem.muda_energia(-5)
-            personagem.muda_humor(-5)
->>>>>>> origin/SSilvaGustavo
             print(f'{personagem.nome} já esta acostumado(a) a andar pelos becos a procura de abrigo, mas esta noite em especial está mais difícil, os valentões do bairro vizinho estão por aqui, e com isso os melhores lugares ja estão ocupados."Talvez seja melhor tentar a sorte mais tarde", pensa nosso(a) amigo(a). Melhor não arrumar briga. "Tem dias que viver na rua não é fácil", pensa novamente. ')
             personagem.muda_lugar("beco")
 
     elif acao == 4:
         relogio.avanca_tempo(120)
-<<<<<<< HEAD
-        personagem.muda_energia(30)
-        personagem.muda_fome(-20) 
-=======
         personagem.muda_energia(20)
         personagem.muda_fome(-10)
->>>>>>> origin/SSilvaGustavo
         print(f'"Hoje o dia está preguiçoso", pensa nosso(a) amigo(a).Talvez fosse melhor estender mais esse soninho. Zzzzzzzz')
 
 def print_delay(text, delay = 0.01):
     for n in text:
         print(n, end='')
-<<<<<<< HEAD
         sleep(delay)
-=======
-        sleep(delay)
-
-
-def noite(personagem, relogio):
-    print('Você conseguiu fugir')
-
-    print(
-        f'São {str(relogio)}, do {relogio.dia}° dia, {personagem.nome} encontra-se em um {personagem.lugar}.')
-    print(personagem)
-    sleep(1)
-    fase_noite = int(Prompt.ask('''
-                           1 - Procurar comida
-                           2 - Procurar abrigo
-                           '''))
-
-    if fase_noite == 1:
-        comida_noite = randint(1, 3)
-
-        if comida_noite == 1:
-            personagem.muda_fome(15)
-            personagem.muda_energia(10)
-            personagem.muda_humor(5)
-            personagem.muda_frio(-5)
-            relogio.avanca_tempo(50)
-            print(f'{personagem.nome}, conseguiu comida de primeira.')
-        elif comida_noite == 2:
-            personagem.muda_fome(10)
-            personagem.muda_energia(-5)
-            personagem.muda_humor(5)
-            personagem.muda_frio(-5)
-            relogio.avanca_tempo(50)
-            print(f'{personagem.nome}, conseguiu comida de segunda vez.')
-        else:
-            personagem.muda_fome(-10)
-            personagem.muda_energia(-5)
-            personagem.muda_humor(-5)
-            personagem.muda_frio(-10)
-            relogio.avanca_tempo(50)
-            print(f'{personagem.nome}, não conseguiu comida.')
-    elif fase_noite == 2:
-        abrigo_noite = randint(1, 3)
-        while True:
-            if abrigo_noite == 1:
-                personagem.muda_fome(5)
-                personagem.muda_energia(15)
-                personagem.muda_humor(10)
-                personagem.muda_frio(10)
-                relogio.avanca_tempo(50)
-                print(f'{personagem.nome}, conseguiu abrigo de primeira.')
-                break
-            elif abrigo_noite == 2:
-                personagem.muda_fome(5)
-                personagem.muda_energia(10)
-                personagem.muda_humor(5)
-                personagem.muda_frio(5)
-                relogio.avanca_tempo(50)
-                print(f'{personagem.nome}, conseguiu abrigo de segunda vez.')
-                break
-            else:
-                personagem.muda_fome(-5)
-                personagem.muda_energia(-5)
-                personagem.muda_humor(-5)
-                personagem.muda_frio(-5)
-                relogio.avanca_tempo(50)
-                print(f'{personagem.nome}, não conseguiu abrigo.')
-
-                opcao = input('''
-                                Deseja continuar procurando ou dormir na rua [S/N]
-                                ''').upper().split()[0]
-                if opcao == 'S':
-                    abrigo_noite = randint(1, 2)
-                    if abrigo_noite == 1:
-                        print('Você tentou e não conseguiu')
-                        personagem.muda_energia(-10)
-                        personagem.muda_frio(-5)
-                    else:
-                        print('Você conseguiu achar um abrigo.')
-                        personagem.muda_fome(5)
-                        personagem.muda_energia(10)
-                        personagem.muda_humor(10)
-                        personagem.muda_frio(10)
-                        relogio.avanca_dia()
-                        break
-                else:
-                    print('Você dormiu na rua.')
-                    personagem.muda_fome(-10)
-                    personagem.muda_energia(20)
-                    personagem.muda_humor(-5)
-                    personagem.muda_frio(-10)
-                    relogio.avanca_dia()
-                    break
->>>>>>> origin/SSilvaGustavo
