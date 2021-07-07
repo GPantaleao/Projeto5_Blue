@@ -105,7 +105,8 @@ def opcoes_padrao(relogio, personagem, acao):
         relogio.avanca_tempo(120)
         personagem.muda_energia(20)
         personagem.muda_fome(-10)
-        print(f'"Hoje o dia está preguiçoso", pensa nosso(a) amigo(a).Talvez fosse melhor estender mais esse soninho. Zzzzzzzz')
+        personagem.muda_frio(5)
+        print(f'"Hoje o dia está preguiçoso", pensa nosso(a) amigo(a).Vou aproveitar e tirar um soninho soninho. Zzzzzzzz')
 
 
 def print_delay(text, delay=0.01):
