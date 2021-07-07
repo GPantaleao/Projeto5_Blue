@@ -21,9 +21,9 @@ class Carrocinha:
             if sorteio_carrocinha == 1:  # Cao conseguiu fugir
                 relogio.avanca_tempo(80)
                 print(f'{personagem.nome} depois de muito esforço conseguiu fugir da carrocinha, porém se sente muito cansado, decidiu se esconder e descansar até a situação se acalmar')
-                personagem.muda_fome(20)
+                personagem.muda_fome(10)
                 personagem.muda_energia(10)
-                personagem.muda_humor(5)
+                personagem.muda_humor(10)
                 relogio.avanca_dia()
             elif sorteio_carrocinha == 2:  # Cao não conseguiu fugir
                 print(
@@ -37,14 +37,15 @@ class Carrocinha:
                         input("Você deseja tentar fugir novamente [S/N]: ")).strip().upper()[0]
                     if teste == "S":
                         # Jogo Pedra Papel e Tesoura atribuida a opção Fugir
+                        personagem.muda_energia(-5)
                         pepate.jogopepate(personagem)
                         if pepate.jogadaCao == True:
                             relogio.avanca_tempo(80)
                             print(
                                 f'{personagem.nome} depois de muito esforço conseguiu fugir da carrocinha, porém se sente muito cansado, decidiu se esconder e descansar até a situação se acalmar')
-                            personagem.muda_fome(-10)
-                            personagem.muda_energia(-15)
-                            personagem.muda_humor(-5)
+                            personagem.muda_fome(5)
+                            personagem.muda_energia(5)
+                            personagem.muda_humor(10)
                             relogio.avanca_dia()
                             break
                     else:
@@ -53,9 +54,9 @@ class Carrocinha:
                         # Se o dia for igual a 1 o cachorro nao tem a opção de ser adotado (apenas a partir do dia 2)
                         if relogio.dia == 1:
                             personagem.muda_fome(-10)
-                            personagem.muda_energia(-25)
-                            personagem.muda_humor(-20)
-                            personagem.muda_frio(-20)
+                            personagem.muda_energia(-10)
+                            personagem.muda_humor(-10)
+                            personagem.muda_frio(-5)
                             relogio.avanca_tempo(720)
                             noite(personagem, relogio)
                             break
@@ -65,9 +66,9 @@ class Carrocinha:
                                 break
                             else:
                                 personagem.muda_fome(-10)
-                                personagem.muda_energia(-25)
-                                personagem.muda_humor(-20)
-                                personagem.muda_frio(-20)
+                                personagem.muda_energia(-10)
+                                personagem.muda_humor(-10)
+                                personagem.muda_frio(-5)
                                 # 12h após sair da carrocinha
                                 relogio.avanca_tempo(720)
                                 noite(personagem, relogio)
@@ -78,9 +79,9 @@ class Carrocinha:
             if sorteio_carrocinha == 1:  # Conseguiu se esconder
                 relogio.avanca_tempo(80)
                 print(f'{personagem.nome} conseguiu se esconder, porém se sente muito cansado, decidiu se esconder e descansar até a situação se acalmar')
-                personagem.muda_fome(20)
-                personagem.muda_energia(10)
-                personagem.muda_humor(5)
+                personagem.muda_fome(5)
+                personagem.muda_energia(5)
+                personagem.muda_humor(10)
             elif sorteio_carrocinha == 2:  # Não conseguiu se esconder
                 print(f'{personagem.nome} não conseguiu se esconder, você pode correr e tentar novamente, lembrando que se sua energia chegar a 0, GAME OVER!')
                 adocao = randint(1, 3)
@@ -91,14 +92,15 @@ class Carrocinha:
                         input("Você deseja tentar se esconder novamente [S/N]: ")).strip().upper()[0]
                     if teste == "S":
                         # Jogo do Dado atribuida a opção Esconder
+                        personagem.muda_energia(-5)
                         dado.jogoDado(personagem)
                         if dado.caoDado == True:
                             relogio.avanca_tempo(80)
                             print(
                                 f'{personagem.nome} depois de muito esforço conseguiu se esconder da carrocinha, porém se sente muito cansado, decidiu se esconder e descansar até a situação se acalmar')
-                            personagem.muda_fome(-10)
-                            personagem.muda_energia(-15)
-                            personagem.muda_humor(-5)
+                            personagem.muda_fome(5)
+                            personagem.muda_energia(5)
+                            personagem.muda_humor(10)
                             break
                     else:
                         print(
@@ -107,9 +109,9 @@ class Carrocinha:
                         # Se o dia for igual a 1 o cachorro nao tem a opção de ser adotado (apenas a partir do dia 2)
                         if relogio.dia == 1:
                             personagem.muda_fome(-10)
-                            personagem.muda_energia(-25)
-                            personagem.muda_humor(-20)
-                            personagem.muda_frio(-20)
+                            personagem.muda_energia(-10)
+                            personagem.muda_humor(-10)
+                            personagem.muda_frio(-5)
                             # 12h após sair da carrocinha
                             relogio.avanca_tempo(720)
                             noite(personagem, relogio)
@@ -120,9 +122,9 @@ class Carrocinha:
                                 break
                             else:
                                 personagem.muda_fome(-10)
-                                personagem.muda_energia(-25)
-                                personagem.muda_humor(-20)
-                                personagem.muda_frio(-20)
+                                personagem.muda_energia(-10)
+                                personagem.muda_humor(-10)
+                                personagem.muda_frio(-5)
                                 relogio.avanca_tempo(720)
                                 noite(personagem, relogio)
                                 break
