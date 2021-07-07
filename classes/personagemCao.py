@@ -27,7 +27,7 @@ class Personagem:
         if self.__humor >= 100:
             self.__humor = 100
         elif self.__humor <= 0:
-            exit('Humor chegou a Zero. GAME OVER')
+            exit(' Humor chegou a Zero. GAME OVER')
 
     
     def muda_fome(self,fome_nova):
@@ -46,7 +46,11 @@ class Personagem:
 
 
     def muda_energia(self,nova_energia):
-       self.__energia += nova_energia
+        self.__energia += nova_energia
+        if self.__energia >= 100:
+            self.__energia = 100
+        elif self.__energia <= 0:
+            exit('Frio chegou a Zero. GAME OVER')
 
     def muda_lugar(self,novo_lugar):
        self.__lugar = novo_lugar 
