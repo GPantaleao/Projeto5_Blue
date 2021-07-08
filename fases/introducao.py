@@ -1,11 +1,20 @@
 from time import sleep
-from tqdm import tqdm   #importa a barra de carregamento#
+from tqdm import tqdm  # importa a barra de carregamento#
 from auxiliar.funcoes_auxiliares import print_delay
+
+# importando a função da musica inicial
+from auxiliar.funcoes_auxiliares import musica_incial
+
+# importando a biblioteca para limpar tela
+import subprocess as cls
+
 
 class Introducao:
     def __init__(self):
         pass
+
     def executar(self):
+        musica_incial()  # chamando a função da musica inicial
         print_delay('''
         Jogo - Dia de Cão 
        
@@ -23,6 +32,7 @@ Mas a vida nas ruas não é fácil, então fique atento nas necessidades do cão
 
         ''')
         print('\nComeçando o Jogo\n')
-        for i in tqdm(range (150)): #cria um indicador de carregamento#
+        for i in tqdm(range(150)):  # cria um indicador de carregamento#
             sleep(0.0001)
-        
+        sleep(2)
+        cls.call('cls', shell=True)  # chamando a função de limpar tela

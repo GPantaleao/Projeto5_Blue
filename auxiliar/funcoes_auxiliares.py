@@ -2,6 +2,7 @@ from random import randint
 from rich import print
 from time import sleep
 from rich.prompt import Prompt
+from pygame import mixer
 
 
 def opcoes_padrao(relogio, personagem, acao):
@@ -119,6 +120,11 @@ def print_delay(text, delay=0.01):
 
 
 def noite(personagem, relogio):
+    """
+     => função auxiliar - Noite
+
+     => Faz: Dar opção de escolha após sair da carrocinha.
+    """
     print('Você conseguiu fugir')
 
     print(
@@ -205,3 +211,116 @@ def noite(personagem, relogio):
                     personagem.muda_frio(-20)
                     relogio.avanca_dia()
                     break
+
+
+# definções de efeitos sonoros para cada evento
+
+
+def cachorro_chorando():
+    """
+     => função mixer pygame - sound fx - Cachorro Chorando
+
+     => Faz tocar o som do cahorro chorando
+    """
+    mixer.init()
+    mixer.music.load('./auxiliar/sounds/Cachorrochorando.mp3')
+    mixer.music.play(start=2)
+
+
+def caes_carrocinha():
+    """
+     => função mixer pygame - sound fx - Caes na Carrocinha
+
+     => Faz tocar o som de Caes na Carrocinha
+    """
+    mixer.init()
+    mixer.music.load('./auxiliar/sounds/CaesCarrocinha.mp3')
+    mixer.music.play(start=2)
+
+
+def cao_correndo1():
+    """
+     => função mixer pygame - sound fx - Caes correndo 1
+
+     => Faz tocar o som de Cão correndo (Opção 1)
+    """
+    mixer.init()
+    mixer.music.load('./auxiliar/sounds/Caocorrendo.mp3')
+    mixer.music.play(start=2)
+
+
+def cao_correndo2():
+    """
+     => função mixer pygame - sound fx - Cão Correndo 2
+
+     => Faz tocar o som de Cão Correndo (Opção 2)
+    """
+    mixer.init()
+    mixer.music.load('./auxiliar/sounds/Caocorrendo2.mp3')
+    mixer.music.play(start=2)
+
+
+def cao_hostil():
+    """
+     => função mixer pygame - sound fx - Cão Hostil
+
+     => Faz tocar o som de Caes na Carrocinha
+    """
+    mixer.init()
+    mixer.music.load('./auxiliar/sounds/CaoHostil.mp3')
+    mixer.music.play(start=2)
+
+
+def comendo():
+    """
+     => função mixer pygame - sound fx - Cão Comendo
+
+     => Faz tocar o som de Cão Comendo
+    """
+    mixer.init()
+    mixer.music.load('./auxiliar/sounds/Comendo.mp3')
+    mixer.music.play(start=2)
+
+
+def correntes_carrocinha():
+    """
+     => função mixer pygame - sound fx - Correntes da Cachorrocinha
+
+     => Faz tocar o som de Correntes da Carrocinha
+    """
+    mixer.init()
+    mixer.music.load('./auxiliar/sounds/CorrentesCarrocinha.mp3')
+    mixer.music.play(start=1)
+
+
+def outros_caes():
+    """
+     => função mixer pygame - sound fx - Outros Cães
+
+     => Faz tocar o som de Outros Cães
+    """
+    mixer.init()
+    mixer.music.load('./auxiliar/sounds/CaesCarrocinha.mp3')
+    mixer.music.play(start=20)
+
+
+def latido():
+    """
+     função mixer pygame - sound fx - Latido
+
+     Faz tocar o som de Latido
+    """
+    mixer.init()
+    mixer.music.load('./auxiliar/sounds/latido.mp3')
+    mixer.music.play(loops=2)
+
+
+def musica_incial():
+    """
+     função mixer pygame - sound fx - Musica Inicial
+
+     Faz tocar o som de inicio do jogo
+    """
+    mixer.init()
+    mixer.music.load('./auxiliar/sounds/wi.mp3')
+    mixer.music.play()

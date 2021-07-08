@@ -4,13 +4,17 @@ from random import randint
 from classes.carrocinha import Carrocinha
 from rich import print
 from time import sleep
-from rich.prompt import Prompt #Pra mudar a cor no input
-     
+from rich.prompt import Prompt  # Pra mudar a cor no input
+
+# importando a função latido
+from auxiliar.funcoes_auxiliares import latido
+
+
 def fase1(relogio, personagem):
     print(f'São {str(relogio)}, do {relogio.dia}° dia, {personagem.nome} encontra-se em um {personagem.lugar}.')
     print(personagem)
     sleep(1)
-
+    latido()  # chamando a função latido
     acao1 = int(Prompt.ask(f'''
     O que {personagem.nome} vai fazer?
     [blue]
@@ -21,7 +25,7 @@ def fase1(relogio, personagem):
     [/blue]
     '''))
 
-    while acao1 not in [1,2,3,4]:
+    while acao1 not in [1, 2, 3, 4]:
         print('Opção inválida.')
         acao1 = int(Prompt.ask(f'''
     O que {personagem.nome} vai fazer?
@@ -32,14 +36,15 @@ def fase1(relogio, personagem):
     4- Voltar a dormir
     [/blue]
     '''))
-    
+
     opcoes_padrao(relogio, personagem, acao1)
     sleep(1)
     fase2(relogio, personagem, acao1)
-    
+
 
 def fase2(relogio, personagem, opcao_escolhida1):
-    print(f'São {str(relogio)}, {personagem.nome} você está em um {personagem.lugar}.')
+    print(
+        f'São {str(relogio)}, {personagem.nome} você está em um {personagem.lugar}.')
     print(personagem)
     carrocinha = Carrocinha()
     if opcao_escolhida1 != 1:
@@ -51,16 +56,17 @@ def fase2(relogio, personagem, opcao_escolhida1):
     if opcao_escolhida1 != 4:
         print('[blue]4- Voltar a dormir[/blue]')
     print('[blue]5- Explorar a região[/blue]')
-    
+
     acao2 = int(input('\nQual será sua próxima ação?\n'))
     opcoes_padrao(relogio, personagem, acao2)
     if acao2 == 5:
-        sorteio_passeio = randint(1,4)
-        relogio.avanca_tempo(50)  
+        sorteio_passeio = randint(1, 4)
+        relogio.avanca_tempo(50)
         if sorteio_passeio == 1:
             personagem.muda_lugar("parque")
-            print(f'"Uma volta no parque sempre é uma boa ideia", pensa {personagem.nome}...')
-            cachorro_hostil = randint(1,3)
+            print(
+                f'"Uma volta no parque sempre é uma boa ideia", pensa {personagem.nome}...')
+            cachorro_hostil = randint(1, 3)
             if cachorro_hostil == 1:
                 personagem.muda_fome(-5)
                 personagem.muda_energia(-5)
@@ -70,7 +76,7 @@ def fase2(relogio, personagem, opcao_escolhida1):
                 personagem.muda_fome(-5)
                 personagem.muda_energia(-10)
                 personagem.muda_humor(-10)
-                print(f'{personagem.nome} adora parques, fica correndo entre os arbustos e se esfregando na grama ele(a) brinca feliz, e acaba até se esquecendo da vida, e da tristeza de sempre estar sozinho(a). E no meio de tanta diversão não nota a presença de um cachorro hostil que o(a) observava, e que sem ao menos dizer uma palavra corre para atacar {personagem.nome}, que consegue se desvencilhar e corre para se esconder nos arbustos.') 
+                print(f'{personagem.nome} adora parques, fica correndo entre os arbustos e se esfregando na grama ele(a) brinca feliz, e acaba até se esquecendo da vida, e da tristeza de sempre estar sozinho(a). E no meio de tanta diversão não nota a presença de um cachorro hostil que o(a) observava, e que sem ao menos dizer uma palavra corre para atacar {personagem.nome}, que consegue se desvencilhar e corre para se esconder nos arbustos.')
             else:
                 personagem.muda_fome(10)
                 personagem.muda_energia(10)
@@ -79,13 +85,15 @@ def fase2(relogio, personagem, opcao_escolhida1):
                 carrocinha.carrocinha(relogio, personagem)
         elif sorteio_passeio == 2:
             personagem.muda_lugar("shopping")
-            shopping_passeio = randint(1,3)
-            print(f'Talvez pudesse ir para a zona sul da cidade para conhecer, pois dizem que são granfinos quem vivem lá. "Talvez eu consiga algum petisco delicioso", pensa {personagem.nome}.')
+            shopping_passeio = randint(1, 3)
+            print(
+                f'Talvez pudesse ir para a zona sul da cidade para conhecer, pois dizem que são granfinos quem vivem lá. "Talvez eu consiga algum petisco delicioso", pensa {personagem.nome}.')
             if shopping_passeio == 1:
                 personagem.muda_fome(20)
                 personagem.muda_energia(15)
                 personagem.muda_humor(10)
-                print(f'Saindo dos becos escuros, ele(a) se dirige para o centro. Prédios altos, carros e muito barulho. Na esquina ele(a) avista um prédio muito grande e com um delicioso cheiro e corre naquela direção. Aquele seria o famoso Shopping, ele(a) tenta de todas as formas entrar, entretanto é barrado pelos seguranças, e resolve somente ficar sentado admirando a grandeza daquele lugar. Até que um rapaz se aproxima e faz um afago em sua cabeça, isso deixa {personagem.nome} muito feliz, ele(a) fica mais uns minutos e resolve voltar, hoje já ganhou um carinho, pensa nosso amigo com a barriga ja roncando, mas quando ele está em retirada o rapaz que lhe fez uma afago volta e lhe da uma coxinha. Realmente foi um dia de sorte. {personagem.nome} nunca tinha comido algo tão maravilhoso.')
+                print(
+                    f'Saindo dos becos escuros, ele(a) se dirige para o centro. Prédios altos, carros e muito barulho. Na esquina ele(a) avista um prédio muito grande e com um delicioso cheiro e corre naquela direção. Aquele seria o famoso Shopping, ele(a) tenta de todas as formas entrar, entretanto é barrado pelos seguranças, e resolve somente ficar sentado admirando a grandeza daquele lugar. Até que um rapaz se aproxima e faz um afago em sua cabeça, isso deixa {personagem.nome} muito feliz, ele(a) fica mais uns minutos e resolve voltar, hoje já ganhou um carinho, pensa nosso amigo com a barriga ja roncando, mas quando ele está em retirada o rapaz que lhe fez uma afago volta e lhe da uma coxinha. Realmente foi um dia de sorte. {personagem.nome} nunca tinha comido algo tão maravilhoso.')
             elif shopping_passeio == 2:
                 personagem.muda_fome(-5)
                 personagem.muda_energia(-5)
@@ -103,8 +111,9 @@ def fase2(relogio, personagem, opcao_escolhida1):
             personagem.muda_fome(10)
             personagem.muda_energia(-20)
             personagem.muda_humor(20)
-            print(f'"Padaria é uma boa", pensa {personagem.nome} com agua na boca somente com a recordação de um dia que ganhou um pãozinho recheado.')
-            surpresa = randint(1,3)
+            print(
+                f'"Padaria é uma boa", pensa {personagem.nome} com agua na boca somente com a recordação de um dia que ganhou um pãozinho recheado.')
+            surpresa = randint(1, 3)
             if surpresa == 1:
                 personagem.muda_fome(20)
                 personagem.muda_energia(10)
@@ -115,22 +124,24 @@ def fase2(relogio, personagem, opcao_escolhida1):
                 personagem.muda_fome(-20)
                 personagem.muda_energia(-10)
                 personagem.muda_humor(20)
-                print(f'{personagem.nome} sabe alguns lugares para conseguir comida, ainda existem pessoas gentis que o(a) alimentam às vezes, mas existe épocas que fica dias sem comer, tendo que tomar água dos córregos, ou a água com sabão que as pessoas lavam o quintal e fica parada nas ruas. "Talvez hoje eu tenha sorte e ganhe um petisco gostoso", pensa nosso(a) amigo(a) enquanto corre para a padaria. Quando chega lá encontra o velho padeiro que esta na janela, e como te costume joga uns petisquinhos de frios para {personagem.nome} que agora parte feliz e com a barriguinha cheia. Entretanto ao virar a esquina ele ve a carrocinha que começa a persegui- lo(a)') 
+                print(f'{personagem.nome} sabe alguns lugares para conseguir comida, ainda existem pessoas gentis que o(a) alimentam às vezes, mas existe épocas que fica dias sem comer, tendo que tomar água dos córregos, ou a água com sabão que as pessoas lavam o quintal e fica parada nas ruas. "Talvez hoje eu tenha sorte e ganhe um petisco gostoso", pensa nosso(a) amigo(a) enquanto corre para a padaria. Quando chega lá encontra o velho padeiro que esta na janela, e como te costume joga uns petisquinhos de frios para {personagem.nome} que agora parte feliz e com a barriguinha cheia. Entretanto ao virar a esquina ele ve a carrocinha que começa a persegui- lo(a)')
                 carrocinha.carrocinha(relogio, personagem)
             else:
                 print(f'{personagem.nome} corre para a Padaria em busca de alguns petiscos, parando só para fazer xixi em algumas moitas para dizer que passou por lá, mas quando chega na padaria a porta está fechada, e está cheio de gente. Ele(a) tenta se aproximar mas as pessoas gritam com ele(a) e o mandam sair."Infelizmente hoje não é um dia de tanta sorte," pensa nosso(a) amigo(a).')
         else:
             personagem.muda_lugar("açougue")
-            sorteioacougue = randint(1,3)
+            sorteioacougue = randint(1, 3)
             if sorteioacougue == 1:
                 personagem.muda_fome(20)
                 personagem.muda_energia(30)
                 personagem.muda_humor(30)
-                print(f'{personagem.nome}, você encotrou um açougue. O dono era muito gentil e deixou você ficar com ele!')
+                print(
+                    f'{personagem.nome}, você encotrou um açougue. O dono era muito gentil e deixou você ficar com ele!')
                 if relogio.dia > 1:
-                    adocao_acougue = randint(1,3)
+                    adocao_acougue = randint(1, 3)
                     if adocao_acougue == 1:
-                        print(f'{personagem.nome}, o dono do açougue decidiu te adotar!')
+                        print(
+                            f'{personagem.nome}, o dono do açougue decidiu te adotar!')
                 relogio.avanca_dia()
             elif sorteioacougue == 2:
                 personagem.muda_fome(20)
@@ -140,7 +151,8 @@ def fase2(relogio, personagem, opcao_escolhida1):
                 print(f'{personagem.nome}, você encotrou um açougue. O dono era muito gentil, porém deixou você ficar com ele apenas durante o dia!')
                 relogio.avanca_tempo(720)
             else:
-                print(f'{personagem.nome}, você encotrou um açougue. Entretanto, o dono ficou incomodado com sua presença e chamou a carrocinha!')
+                print(
+                    f'{personagem.nome}, você encotrou um açougue. Entretanto, o dono ficou incomodado com sua presença e chamou a carrocinha!')
                 carrocinha.carrocinha(relogio, personagem)
-                
+
     fase1(relogio, personagem)
