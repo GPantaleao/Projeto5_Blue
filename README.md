@@ -11,6 +11,8 @@
 
 > Você será um cachorrinho 🐶 de rua, nesta trama seu objetivo é sobreviver e ser adotado enquanto você foge do seu pior vilão... A carrocinha.
 
+
+
 ### Ajustes e melhorias
 
 O projeto ainda está em desenvolvimento e as próximas atualizações serão voltadas nas seguintes tarefas:
@@ -59,6 +61,7 @@ zerada, seu dia encerrará automaticamente.
 
 Qualquer outra dúvida referente as regras, entre em contato conosco!
 
+
 ## 📫 Contribuindo para Projeto 5 - Jogo Interativo
 <!---Se o seu README for longo ou se você tiver algum processo ou etapas específicas que deseja que os contribuidores sigam, considere a criação de um arquivo CONTRIBUTING.md separado--->
 Para contribuir com Projeto 5 - Jogo Interativo, siga estas etapas:
@@ -70,6 +73,7 @@ Para contribuir com Projeto 5 - Jogo Interativo, siga estas etapas:
 5. Crie a solicitação de pull.
 
 Como alternativa, consulte a documentação do GitHub em [como criar uma solicitação pull](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request).
+
 
 ## 🤝Idealizadores e Colaboradores 
 
@@ -122,9 +126,11 @@ Agradecemos às seguintes pessoas que contribuíram para este projeto:
 </table>
 
 
+
 ## Não compre, adote! <br> 🐶
 
 Quer conhecer proetos de adoção? Clique [AQUI](CONTRIBUTING.md) e leia como adotar.
+
 
 
 
