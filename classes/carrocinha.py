@@ -2,8 +2,9 @@ from random import randint
 from time import sleep
 from classes.PePaTe import PePaTe
 from classes.dados import Dados
-
+from auxiliar.funcoes_auxiliares import final
 class Carrocinha:
+
     # Pegando parametros relogio e personagem, para usar no main
     def carrocinha(self, relogio, personagem):
         print(f'Entre as ruas {personagem.nome} acaba se deparando com uma carrocinha')
@@ -67,7 +68,7 @@ class Carrocinha:
                                 print(f'''Logons minutos se passam e novamente a porta se abre,{personagem.nome} sem nenhuma emoção é arrastado para fora de sua jaula e é levado para fora da sala, vários olhinhos o acampanham até saída, e a porta se fecha.
                                 Quando {personagem.nome} abre os olhos esta numa sala clara e o mesmo rapaz que lhe deu a coxinha estava lá, pega sua coleira e diz "Eu spu Pedro e agora você será parte da minha família, estou de adotando, se prepare porque agora temos que lhe dar um novo nome.''')
                                 sleep(1)
-                                print('NÃO COMPRE, ADOTE!')
+                                final()
                                 exit()
                             else:
                                 print(f'''As horas se arrastam e {personagem.nome} não tem noção alguma de quanto tempo já está preso. O medo toma conta do seu coração, preso naquele lugar pequeno e frio ja não sabe o que pode fazer para fugir. Olha para os lados e ve gaiolas e mais gaiolas empilhadas cheias de cachorros, de varias tamanhos, alguns velhos, outros doentes, mas também alguns pequenos filhotes que parecm ter meses de vida.{personagem.nome} vendo isso pensa, " como pode existir um lugar tão triste como esse?" 
@@ -123,7 +124,7 @@ class Carrocinha:
                                 sleep(1)
                                 print(f' Mais uma vez a porta se abre e uma pessoa uniformizada entra e leva {personagem.nome} para fora da sala, la ele ve as pessoas que a pouco estavam olhando as gaiolas inclusive a menina que ele cheirou a mão, que corre em sua direção e o abraça dizendo que agora é parte da família.')
                                 sleep(1)
-                                print('NÃO COMPRE, ADOTE!')
+                                final()
                                 exit()
                             else:
                                 personagem.muda_fome(-10)

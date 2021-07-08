@@ -2,9 +2,11 @@ from classes.relogio import Relogio
 from sys import exit
 from fases.fases import fase1
 from classes.carrocinha import Carrocinha
+from auxiliar.funcoes_auxiliares import final
 
 def gameOver():
     print('Game Over!')
+    final()
     reiniciar = input('Gostaria de jogar novamente (s/n)? ')
     if reiniciar == 's':
         relogio = Relogio()
