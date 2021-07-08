@@ -5,6 +5,7 @@ from classes.carrocinha import Carrocinha
 from rich import print
 from time import sleep
 from rich.prompt import Prompt #Pra mudar a cor no input
+from auxiliar.funcoes_auxiliares import final
      
 def fase1(relogio, personagem):
     print(f'\nSão {str(relogio)}, do {relogio.dia}° dia, {personagem.nome} encontra-se em um {personagem.lugar}.')
