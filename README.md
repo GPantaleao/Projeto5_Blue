@@ -3,7 +3,7 @@
 # Projeto 5  Blue EdTech - Jogo Interativo 🐶
 
  
-<img src="./auxiliar/images/blue.jpg" alt="blue">
+<center><img src="./auxiliar/images/blue.jpg" alt="blue"></center>
 
 
 
