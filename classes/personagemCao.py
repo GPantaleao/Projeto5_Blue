@@ -2,9 +2,11 @@ from classes.relogio import Relogio
 from sys import exit
 from fases.fases import fase1
 from classes.carrocinha import Carrocinha
+from auxiliar.funcoes_auxiliares import final
 
 def gameOver():
     print('Game Over!')
+    final()
     reiniciar = input('Gostaria de jogar novamente (s/n)? ')
     if reiniciar == 's':
         relogio = Relogio()
@@ -37,7 +39,12 @@ class Personagem:
         '''
 
     def muda_humor(self,humor_novo):
-        self.__humor += humor_novo
+        humnov = humor_novo
+        if humnov >= 0:
+            print(f'''Humor +{humnov}%''')
+        else:
+            print(f'''Humor -{abs(humnov)}%''')
+        self.__humor += humnov
         if self.__humor >= 100:
             self.__humor = 100
         elif self.__humor <= 0:
@@ -46,7 +53,12 @@ class Personagem:
 
     
     def muda_fome(self,fome_nova):
-        self.__fome += fome_nova
+        fomnov = fome_nova
+        if fomnov >= 0:
+            print(f'''Fome +{fomnov}%''')
+        else:
+            print(f'''Fome -{abs(fomnov)}%''')
+        self.__fome += fomnov
         if self.__fome >= 100:
             self.__fome = 100
         elif self.__fome <= 0:
@@ -54,7 +66,12 @@ class Personagem:
             gameOver()
 
     def muda_frio(self,frio_novo):
-        self.__frio += frio_novo
+        frinov = frio_novo
+        if frinov >= 0:
+            print(f'''Frio +{frinov}%''')
+        else:
+            print(f'''Frio -{abs(frinov)}%''')
+        self.__frio += frinov
         if self.__frio >= 100:
             self.__frio = 100
         elif self.__frio <= 0:
@@ -63,12 +80,18 @@ class Personagem:
 
 
     def muda_energia(self,nova_energia):
-        self.__energia += nova_energia
+        enenov = nova_energia
+        if enenov >= 0:
+            print(f'''Energia +{enenov}%''')
+        else:
+            print(f'''Energia -{abs(enenov)}%''')
+        self.__energia += enenov
         if self.__energia >= 100:
             self.__energia = 100
         elif self.__energia <= 0:
             print('Energia chegou a Zero.')
             gameOver()
+            
 
     def muda_lugar(self,novo_lugar):
        self.__lugar = novo_lugar 
