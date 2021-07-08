@@ -20,4 +20,4 @@
 
 6. Comentários
 	todos (opcional)
-	~todos
+	~2
