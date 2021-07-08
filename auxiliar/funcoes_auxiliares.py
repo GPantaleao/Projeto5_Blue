@@ -32,11 +32,16 @@ def opcoes_padrao(relogio, personagem, acao):
                 personagem.muda_energia(-10)
                 personagem.muda_humor(-5)
                 print(f'Hoje {personagem.nome} está sem sorte! Apesar de procurar em muitos lixos ele(a) não conseguiu nada. Ouviu esse barulho...é a barriguinha do(a) nosso(a) amigo(a).')
+                if relogio.dia >= 2:
+                    print(f'{personagem.nome} ouve um barulho e tenta se esconder entre os lixos, em seguida sente uma mão lhe segurando, com cuidado uma mulher lhe pega no colo e fala baixinho: "calma amiguinho(a) agora está tudo bem, eu vou te proteger", e abraça {personagem.nome} carinhosamente, e segue em direção a saída do beco {personagem.nome} nem pode acreditar no que está acontecendo, agora ele sabe o que pode acontecer quando alguns cachorros "somem" das ruas. Eles podem sim, ter um final feliz e encontrar um lar. ')
+                    sleep(1)
+                    print('NÃO COMPRE, ADOTE!')
+                    exit()
 
         elif comida == 2:
             personagem.muda_lugar("parque")
             sorteio_comida = randint(1,3)
-            relogio.avanca_tempo(60)
+            relogio.avanca_tempo(180)
             if sorteio_comida == 1:
                 personagem.muda_fome(20)
                 personagem.muda_energia(15)
@@ -66,11 +71,16 @@ def opcoes_padrao(relogio, personagem, acao):
             print(f'Andando pela cidade {personagem.nome} encontra um parque, e acredita ser um ótimo lugar para encontrar um novo amigo. Lá ele vê uma mulher passeando com uma cachorrinha, e analisa se pode ou não se aproximar...."Humm pensando bem essa não é uma boa idéia, elas parecem ser muito metidas", pensa nosso(a) amigo(a). Enfim avista um casal com um cachorrinho jovem de porte médio, pelos reluzentes ao sol, ta aí a oportunidade. \n')
             dono = randint(1,2)
             if dono == 1:
-                relogio.avanca_tempo(30)
+                relogio.avanca_tempo(180)
                 personagem.muda_fome(5)
                 personagem.muda_energia(10)
                 personagem.muda_humor(10)
                 print(f'E não é que nosso(a) amigo(a) estava certo(a). {personagem.nome} se aproximou devagar e fez um novo amigo no parque, Bilu, um legítimo  boxer de alta linhagem, {personagem.nome} nem sabia o que ele estava falando sobre pedigree e sei lá mais o que, o que mais queria era aproveitar e continuar a brincar com a bola que Bilu havia emprestado. Não é todo dia que os donos deixam ele(a) se aproximar...')
+                if relogio.dia >= 2:
+                    print(f'{personagem.nome} continua a brincar quando sente uma mão lhe levantar,a dona do Bilu o pega carinhosamente no colo e segue em direção a saída do parque com Bilu os seguin do. {personagem.nome} nem pode acreditar no que está acontecendo, a dona de o abraça e diz "se prepara menino(a) que hoje você ganhou um família e um irmão atrapalhado". Bilu corre alegremente balançando o rabo, sabendo que agora vai ter alguém para brincar. {personagem.nome} nem acredita na sorte que teve hoje, e mal consegue conter seu rabo, que gira sem parar. ')
+                    sleep(1)
+                    print('NÃO COMPRE, ADOTE!')
+                    exit()
             else:
                 relogio.avanca_tempo(20)
                 personagem.muda_energia(-5)
@@ -78,7 +88,7 @@ def opcoes_padrao(relogio, personagem, acao):
                 print(f'{personagem.nome}, se aproxima devagar e fica esperando até que seja notado(a). Entretando quando a mulher o(a) vê leva um susto, e o homem começou a jogar pequenas pedras no(a) nosso(a) amigo(a), mandando ele(a) se afastar... {personagem.nome} foge o mais rápido do que pode ao som dos berros do homem o chamando de pulguento(a) e fedido(a). Pobre do(a) nosso(a) amigo(a), que apesar de tudo tenta ficar limpinho(a) se esfregando nas gramas dos quintais floridos das casas.')
 
         else:
-            relogio.avanca_tempo(20)
+            relogio.avanca_tempo(180)
             personagem.muda_fome(-5)
             personagem.muda_energia(-10)
             personagem.muda_humor(10)
@@ -89,23 +99,33 @@ def opcoes_padrao(relogio, personagem, acao):
         print(f'{personagem.nome} está se sentindo um pouco cansado, talvez fosse bom procurar por um abrigo para descansar. As ruas podem ser perigosas e frias, se não conseguir um bom lugar para dormir pode ser muito difícil.\n')
         abrigo = randint(1,2)
         if abrigo == 1:
-            relogio.avanca_tempo(120)
+            relogio.avanca_tempo(180)
             personagem.muda_energia(-10)
             personagem.muda_humor(15) 
             print(f'{personagem.nome} já esta acostumado(a) a andar pelos becos a procura de abrigo, mas está cada vez mais difícil. Alguns valentões roubam os melhores lugares, e não é bom arrumar brigas na rua, porque se você se machucar ninguém ajuda. {personagem.nome} sempre se lembra de um velho amigo, Bandite, certe vez, ele não quis ceder seu abrigo e apanhou de dois valentões, ele ficou sem andar por dois dias, até que uma tia veio e o levou de carro, nunca mais se teve notícias do pobre Bandite. Mas hoje é o dia de sorte de nosso(a) amigo(a), ele encontra abriga debaixo de um velho trem abandonado, hoje ele vai poder ter um soninho tranquilo') 
             personagem.muda_lugar("trem abandonado")
         else:
-            relogio.avanca_tempo(40)
+            relogio.avanca_tempo(120)
             personagem.muda_energia(-15)
             personagem.muda_humor(-5)
             print(f'{personagem.nome} já esta acostumado(a) a andar pelos becos a procura de abrigo, mas esta noite em especial está mais difícil, os valentões do bairro vizinho estão por aqui, e com isso os melhores lugares ja estão ocupados."Talvez seja melhor tentar a sorte mais tarde", pensa nosso(a) amigo(a). Melhor não arrumar briga. "Tem dias que viver na rua não é fácil", pensa novamente. ')
             personagem.muda_lugar("beco")
+            if relogio.dia >= 2:
+                    print(f'{personagem.nome} ouve um barulho e tenta se esconder no beco, fica apavorado com a possibilidade de ser um dos valentões ou as crianças que ha alguns dias haviam jogado pedras nele, e  em seguida sente uma mão lhe segurando, o corpo de nosso amigo fica todo rígido. {personagem.nome} levanta e olha para quem o segura e vê um senhor morador de rua, que fala baixinho: "calma amiguinho(a) agora está tudo bem, vem comigo", e o abraça. {personagem.nome} ve bondade naqueles velhos olhos humildes e segue o velho para a saída do beco, eles vão em direção a ponte onde o velho tem uma pequena casa feita de madeira em direção, o velho lhe da um pouco de uma sobra de comida de uma marmita, que {personagem.nome} aceita de bom gosto, em seguida o homem entra e segurando algo pequeno nas mãos, qnd {personagem.nome} olha nem pode acreditar, é um pewueno filhote de gato, tão pretinho que nem dá para ver os olhos, o velho passa um pode para o gato de leite e toma tudo num instante. Notando o olhar intrigado de nosso amigo ele diz: "Resgatei essa aí do córrego, estava quase morrendo, e agora vive aqui comigo, igual a vc amiguinho(a). Agora seremos nós três a nossa família, iremos dividir tudo que temos e ficaremos bem." {personagem.nome} mal pode acreditar na sorte que esta tendo de encontrar alguém tão bom, e percebe qua as vezes quem menos tem é aquele que mais divide, e finalmente consegue relaxar e descansar. ')
+                    sleep(1)
+                    print('NÃO COMPRE, ADOTE!')
+                    exit()
 
     elif acao == 4:
-        relogio.avanca_tempo(120)
+        if relogio.horas >= 19:
+            relogio. avanca_dia()
+        else: 
+            relogio.avanca_tempo(120)
         personagem.muda_energia(20)
         personagem.muda_fome(-10)
-        print(f'"Hoje o dia está preguiçoso", pensa nosso(a) amigo(a).Talvez fosse melhor estender mais esse soninho. Zzzzzzzz')
+        personagem.muda_frio(5)
+
+        print(f'"Hoje o dia está preguiçoso", pensa nosso(a) amigo(a).Vou aproveitar e tirar um soninho soninho. Zzzzzzzz')
 
 
 def print_delay(text, delay=0.01):
