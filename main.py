@@ -11,7 +11,7 @@ if __name__ == '__main__':
     intro = Introducao()
     intro.executar()   ####NÃO ESQUECER DE TIRAR DE COMENTARIO DEPOIS
     relogio = Relogio()
-    nome = input('Digite o nome do seu cãozinho: '). title()
+    nome = input('Digite o nome do seu cãozinho: ').title()
     sleep(1)
     personagem = Personagem(nome)
     fase1(relogio, personagem)
