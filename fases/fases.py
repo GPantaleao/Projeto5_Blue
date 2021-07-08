@@ -5,6 +5,7 @@ from classes.carrocinha import Carrocinha
 from rich import print
 from time import sleep
 from rich.prompt import Prompt #Pra mudar a cor no input
+from auxiliar.funcoes_auxiliares import final
      
 def fase1(relogio, personagem):
     print(f'São {str(relogio)}, do {relogio.dia}° dia, {personagem.nome} encontra-se em um {personagem.lugar}.')
@@ -74,7 +75,7 @@ def fase2(relogio, personagem, opcao_escolhida1):
                 if relogio.dia >= 2:
                     print(f'{personagem.nome} fica escondido até perceber que está novamente seguro, entretanto quando tenta sair dos arbustos sente uma mão lhe segurando, com cuidado uma mulher lhe pega no colo e fala baixinho: "calma amiguinho(a) agora está tudo bem, eu vi o que aconteceu, ele não vai te morder, eu vou te proteger", e abraça {personagem.nome} carinhosamente, e segue em direção a saída do parque. {personagem.nome} nem pode acreditar no que está acontecendo, agora enfim vai ter oportunidade de ter um lar e uma família. ')
                     sleep(1)
-                    print('NÃO COMPRE, ADOTE!')
+                    final()
                     exit()
             else:
                 personagem.muda_fome(5)
@@ -99,7 +100,7 @@ def fase2(relogio, personagem, opcao_escolhida1):
                 if relogio.dia >= 2:
                     print(f'{personagem.nome} decide voltar tranquilamente depois de toda a brincadeira, entretanto um carro para e desce uma família, sem entender um homem se aproxima e o(a) pega no colo, e nosso amigo percebe que é a família que deixou a bola, ele tenta desesperamente fugir pensando que eles vão castiga-lo por causa da bola que ele perdeu, mas o homem aos poucos tenta fazer um carinho e acalma-lo(a), em seguida o coloca no banco de tras juntos com as crianças e diz: "Calma aminguinho(a) vamos para casa, agora esta tudo bem", pela primeira vez em muito tempo ele se sentiu seguro, fechou os olhos e relaxou no banco do carro ')
                     sleep(1)
-                    print('NÃO COMPRE, ADOTE!')
+                    final()
                     exit()
             else:
                 personagem.muda_fome(5)
@@ -142,7 +143,7 @@ def fase2(relogio, personagem, opcao_escolhida1):
                     if adocao_acougue != 1:
                         print(f'{personagem.nome}, fica parado admirando as carnes na vitrine do açougue, com a boca salivando de tamanha a vontade, entretanto não se atreve a entrar, ja esta cansado (a) de mais para ter que fugir quando for enxotado. Ele(a) fica parado(a) ali observando e pensando que a vida as vezes é muito difícil, e mal percebe um funcionário do açougue se aproximando com um osso gigante, e carinhosamente entrega a {personagem.nome} que começa a roer ali mesmo. Em seguida o tal funcionário se aproxima e senta ao lado do nosso(a) amigo(a) e começa a passar a mão na sua cabeça, bem devarainho, a tempos {personagem.nome} não se sente tão acolhido e se se acomoda mais perto do homem, que o pego e o leva para a parte de tras do açougue. {personagem.nome} não entende muito bem o que está acontecendo, em seguida o homem lhe entrega um cobertor e um potinho com água, lhe faz um afago e diz:"Acho que sua vida não é muito fácil amiguinho(a), as vezes não é a vida na rua é difícil e solitária...Agora você pode viver aqui porque você finalmente encontrou um lar, a partir de hoje eu sou sua companhia e você a minha"')
                         sleep(1)
-                        print('NÃO COMPRE, ADOTE!')
+                        final()
                         exit()
                     else:
                         print(f'{personagem.nome}, você encotrou um açougue. O dono era muito gentil e deixou você no açougue até o proximo dia!')
