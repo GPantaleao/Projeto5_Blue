@@ -1,15 +1,25 @@
 from time import sleep
 from tqdm import tqdm   #importa a barra de carregamento#
 from auxiliar.funcoes_auxiliares import print_delay
+from rich import print
 
 class Introducao:
     def __init__(self):
         pass
     def executar(self):
+        print(f'''[blue]
+           ,-.___,-.
+           \_/_ _\_/
+             )O_O(
+            ( ( ) )
+  ---------( )U-'( )----------
+           ```   ```
+       [blue] ''')
+
         print_delay('''
         Jogo - Dia de Cão 
        
-Nesta trama você terá a oprtunidade de conhecer o dia de um cão, o objetivo é ajudar um cachorro de rua a sobreviver e ser adotado,  enquanto foge de um grande inimigo, a carrocinha. 
+Nesta trama você terá a oportunidade de conhecer o dia de um cão, o objetivo é ajudar um cachorro de rua a sobreviver e ser adotado,  enquanto foge de um grande inimigo, a carrocinha. 
 
 Mas a vida nas ruas não é fácil, então fique atento nas necessidades do cão, pois se algum dos status zerarem, você precisará começar o jogo novamente para tentar ser um melhor companheiro para seu amigo.
 
@@ -22,7 +32,15 @@ Mas a vida nas ruas não é fácil, então fique atento nas necessidades do cão
  Energia - A energia são os pontos de ação, todas as suas atividades gastam energia, tente manter sua barriguinha cheia, e com status saudaveis. 
 
         ''')
-        print('\nComeçando o Jogo\n')
+        print(f'''[blue]
+
+                                  .-.
+     (___________________________()6 `-,
+     (   __  Começando o Jogo  _   /''"`
+     //\\                      //\\
+     "" ""                     "" ""
+       [blue] ''')
         for i in tqdm(range (150)): #cria um indicador de carregamento#
             sleep(0.0001)
+        print()
         
