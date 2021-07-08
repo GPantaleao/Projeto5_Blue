@@ -50,14 +50,13 @@ class PePaTe:
             .+/+s/////-`              
         '''
         escolha = " " #Escolha do usuario
-
-        print(f"\n\033[3;7m==== VAMOS JOGAR JOKENPO CONTRA NOSSO INIMIGO (CARROCINHA) PARA TENTAR SALVAR {personagem.nome.upper()} ====\033[0;0m\n")
+        print(f"\n\033[3;7m==== Jogue JOKENPO com o homem uniformizado, se conseguir ganhar poderá ajudar {personagem.nome} a fugir ====\033[0;0m\n")
         escolha = str(input("Qual sua escolha? \033[1;30m[PE - PEDRA]\033[0;0m \033[1;37m[PA - PAPEL]\033[0;0m \033[1;33m[TE - TESOURA]\033[0;0m: ")).strip().upper()[0:2]
         maquina = randint(1,3) #Escolhe um número aleatoria de 1 a 3. 1 = Pedra 2 = Papel, 3 = Tesoura
         sleep(0.8)
         if escolha in "PE": #IF para Pedra
             print('''
-\n\033[4;93mPEDRA''', end=" ")
+\       n\033[4;93mPEDRA''', end=" ")
             sleep(0.7)
             print('''PAPEL''', end=" ")
             sleep(0.7)
