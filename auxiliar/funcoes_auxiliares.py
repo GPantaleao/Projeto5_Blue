@@ -51,7 +51,7 @@ def opcoes_padrao(relogio, personagem, acao):
                 personagem.muda_energia(-10)
                 personagem.muda_humor(-5)
                 if relogio.dia >= 2:
-                    print(f'{personagem.nome} ouve um barulho e tenta se esconder entre os lixos, em seguida sente uma mão lhe segurando, com cuidado uma mulher lhe pega no colo e fala baixinho: "calma amiguinho(a) agora está tudo bem, eu vou te proteger", e abraça {personagem.nome} carinhosamente, e segue em direção a saída do beco {personagem.nome} nem pode acreditar no que está acontecendo, agora ele sabe o que pode acontecer quando alguns cachorros "somem" das ruas. Eles podem sim, ter um final feliz e encontrar um lar. ')
+                    print(f'{personagem.nome} ouve um barulho e tenta se esconder entre os lixos, em seguida sente uma mão lhe segurando. Com cuidado uma mulher lhe pega no colo e fala baixinho: "Calma amiguinho(a) agora está tudo bem, eu vou te proteger", e abraça {personagem.nome} carinhosamente, e segue em direção a saída do beco. {personagem.nome} nem pode acreditar no que está acontecendo, agora ele sabe o que pode acontecer quando alguns cachorros "somem" das ruas. Eles podem sim, ter um final feliz e encontrar um lar. ')
                     sleep(1)
                     final()
                     exit()
@@ -81,7 +81,7 @@ def opcoes_padrao(relogio, personagem, acao):
     elif acao == 2:
         sorteio_amigo = randint(1,3)
         if sorteio_amigo == 1:
-            print(f'Andando pelos becos {personagem.nome} encontra dois cachorros, Mel, uma poodle que foi abandona por ser considerada idosa, e Thor um jovem grande cachorro que foi abandonado depois que seus donas acharam que ele "cresceu demais". Sem hesitar {personagem.nome} chama seus amigos para brincar de pega - pega.... Agora seu rabinho esta balançando tão rápido, que parece que vai fazer ele(a) voar de tão feliz')
+            print(f'Andando pelos becos {personagem.nome} encontra dois cachorros, Mel, uma poodle que foi abandona por ser considerada idosa, e Thor um jovem grande cachorro que foi abandonado depois que seus donas acharam que ele "Cresceu demais". Sem hesitar {personagem.nome} chama seus amigos para brincar de pega - pega.... Agora seu rabinho esta balançando tão rápido, que parece que vai fazer ele(a) voar de tão feliz')
             print()
             relogio.avanca_tempo(40)
             personagem.muda_fome(10)
@@ -100,7 +100,7 @@ def opcoes_padrao(relogio, personagem, acao):
                 personagem.muda_humor(10)
                 relogio.avanca_tempo(180)
                 if relogio.dia >= 2:
-                    print(f'{personagem.nome} continua a brincar quando sente uma mão lhe levantar,a dona do Bilu o pega carinhosamente no colo e segue em direção a saída do parque com Bilu os seguin do. {personagem.nome} nem pode acreditar no que está acontecendo, a dona de o abraça e diz "se prepara menino(a) que hoje você ganhou um família e um irmão atrapalhado". Bilu corre alegremente balançando o rabo, sabendo que agora vai ter alguém para brincar. {personagem.nome} nem acredita na sorte que teve hoje, e mal consegue conter seu rabo, que gira sem parar. ')
+                    print(f'{personagem.nome} continua a brincar quando sente uma mão lhe levantar,a dona do Bilu o pega carinhosamente no colo e segue em direção a saída do parque com Bilu os seguindo. {personagem.nome} nem pode acreditar no que está acontecendo, a dona de Bilu o abraça e diz "Se prepara menino(a) que hoje você ganhou um família e um irmão atrapalhado". Bilu corre alegremente balançando o rabo, sabendo que agora vai ter alguém para brincar. {personagem.nome} nem acredita na sorte que teve hoje, e mal consegue conter seu rabo, que gira sem parar. ')
                     sleep(1)
                     final()
                     exit()
@@ -112,7 +112,7 @@ def opcoes_padrao(relogio, personagem, acao):
                 relogio.avanca_tempo(20)
 
         else:
-            print(f'Hoje o mar não está para peixe, ou melhor para cachorros...{personagem.nome} procurou nos parques e nos portões das casas, mas não encontrou nenhum amigo... "Talvez seja melhor tentar mais tarde.Talvez ainda estejam dormindo", pensa nosso(a) amigo(a).')
+            print(f'Hoje o mar não está para peixe, ou melhor para cachorros... {personagem.nome} procurou nos parques e nos portões das casas, mas não encontrou nenhum amigo... "Talvez seja melhor tentar mais tarde. Talvez ainda estejam dormindo", pensa nosso(a) amigo(a).')
             print()
             personagem.muda_fome(-5)
             personagem.muda_energia(-10)
@@ -121,7 +121,7 @@ def opcoes_padrao(relogio, personagem, acao):
             personagem.muda_lugar("jardim abandonado")
 
     elif acao == 3:
-        print(f'{personagem.nome} está se sentindo um pouco cansado, talvez fosse bom procurar por um abrigo para descansar. As ruas podem ser perigosas e frias, se não conseguir um bom lugar para dormir pode ser muito difícil.\n')
+        print(f'{personagem.nome} está se sentindo um pouco cansado(a), talvez fosse bom procurar por um abrigo para descansar. As ruas podem ser perigosas e frias, se não conseguir um bom lugar para dormir pode ser muito difícil.\n')
         abrigo = randint(1,2)
         if abrigo == 1:
             print(f'{personagem.nome} já esta acostumado(a) a andar pelos becos a procura de abrigo, mas está cada vez mais difícil. Alguns valentões roubam os melhores lugares, e não é bom arrumar brigas na rua, porque se você se machucar ninguém ajuda. {personagem.nome} sempre se lembra de um velho amigo, Bandite, certe vez, ele não quis ceder seu abrigo e apanhou de dois valentões, ele ficou sem andar por dois dias, até que uma tia veio e o levou de carro, nunca mais se teve notícias do pobre Bandite. Mas hoje é o dia de sorte de nosso(a) amigo(a), ele encontra abriga debaixo de um velho trem abandonado, hoje ele vai poder ter um soninho tranquilo') 
@@ -138,7 +138,7 @@ def opcoes_padrao(relogio, personagem, acao):
             personagem.muda_humor(-5)
             personagem.muda_lugar("beco")
             if relogio.dia >= 2:
-                    print(f'{personagem.nome} ouve um barulho e tenta se esconder no beco, fica apavorado com a possibilidade de ser um dos valentões ou as crianças que ha alguns dias haviam jogado pedras nele, e  em seguida sente uma mão lhe segurando, o corpo de nosso amigo fica todo rígido. {personagem.nome} levanta e olha para quem o segura e vê um senhor morador de rua, que fala baixinho: "calma amiguinho(a) agora está tudo bem, vem comigo", e o abraça. {personagem.nome} ve bondade naqueles velhos olhos humildes e segue o velho para a saída do beco, eles vão em direção a ponte onde o velho tem uma pequena casa feita de madeira em direção, o velho lhe da um pouco de uma sobra de comida de uma marmita, que {personagem.nome} aceita de bom gosto, em seguida o homem entra e segurando algo pequeno nas mãos, qnd {personagem.nome} olha nem pode acreditar, é um pewueno filhote de gato, tão pretinho que nem dá para ver os olhos, o velho passa um pode para o gato de leite e toma tudo num instante. Notando o olhar intrigado de nosso amigo ele diz: "Resgatei essa aí do córrego, estava quase morrendo, e agora vive aqui comigo, igual a vc amiguinho(a). Agora seremos nós três a nossa família, iremos dividir tudo que temos e ficaremos bem." {personagem.nome} mal pode acreditar na sorte que esta tendo de encontrar alguém tão bom, e percebe qua as vezes quem menos tem é aquele que mais divide, e finalmente consegue relaxar e descansar. ')
+                    print(f'{personagem.nome} ouve um barulho e tenta se esconder no beco, fica apavorado(a) com a possibilidade de ser um dos valentões ou as crianças que há alguns dias haviam jogado pedras nele(a), e  em seguida sente uma mão lhe segurando, o corpo de nosso amigo fica todo rígido. {personagem.nome} levanta e olha para quem o segura e vê um senhor morador de rua, que fala baixinho: "Calma amiguinho(a) agora está tudo bem, vem comigo", e o abraça. {personagem.nome} ve bondade naqueles velhos olhos humildes e segue o velho para a saída do beco, eles vão em direção a ponte onde o velho tem uma pequena casa feita de madeira em direção, o velho lhe da um pouco de uma sobra de comida de uma marmita, que {personagem.nome} aceita de bom gosto, em seguida o homem entra e segurando algo pequeno nas mãos, quando {personagem.nome} olha nem pode acreditar, é um pequeno filhote de gato, tão pretinho que nem dá para ver os olhos, o velho passa um pote de leite para o gato, que toma tudo num instante. Notando o olhar intrigado de nosso(a) amigo(a) ele diz: "Resgatei essa aí do córrego, estava quase morrendo, e agora vive aqui comigo, igual a vc amiguinho(a). Agora seremos nós três a nossa família, iremos dividir tudo que temos e ficaremos bem". {personagem.nome} mal pode acreditar na sorte que esta tendo de encontrar alguém tão bom, e percebe qua as vezes quem menos tem é aquele que mais divide, e finalmente consegue relaxar e descansar. ')
                     sleep(1)
                     final()
                     exit()
