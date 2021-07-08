@@ -39,17 +39,20 @@ def opcoes_padrao(relogio, personagem, acao):
                 personagem.muda_fome(15)
                 personagem.muda_energia(10)
                 personagem.muda_humor(5)
+                print()
             elif sorteio_comida == 2:
                 print(f'Hoje o dia não foi muito bom! {personagem.nome} teve que vasculhar em muitos lixos para conseguir comida, e algumas delas já não estavam muito boas...')
                 print()
                 personagem.muda_fome(10)
                 personagem.muda_energia(5)
                 personagem.muda_humor(5)
+                print()
             else:
                 print(f'Hoje {personagem.nome} está sem sorte! Apesar de procurar em muitos lixos ele(a) não conseguiu nada. Ouviu esse barulho...é a barriguinha do(a) nosso(a) amigo(a).')
                 print()
                 personagem.muda_energia(-10)
                 personagem.muda_humor(-5)
+                print()
                 if relogio.dia >= 2:
                     print(f'{personagem.nome} ouve um barulho e tenta se esconder entre os lixos, em seguida sente uma mão lhe segurando. Com cuidado uma mulher lhe pega no colo e fala baixinho: "Calma amiguinho(a) agora está tudo bem, eu vou te proteger", e abraça {personagem.nome} carinhosamente, e segue em direção a saída do beco. {personagem.nome} nem pode acreditar no que está acontecendo, agora ele sabe o que pode acontecer quando alguns cachorros "somem" das ruas. Eles podem sim, ter um final feliz e encontrar um lar. ')
                     sleep(1)
@@ -66,17 +69,20 @@ def opcoes_padrao(relogio, personagem, acao):
                 personagem.muda_fome(20)
                 personagem.muda_energia(15)
                 personagem.muda_humor(10)
+                print()
             elif sorteio_comida == 2:
                 print(f'Hoje o dia não foi muito bom! {personagem.nome} teve que andar muito pela cidade para conseguir comida, quando já estava quase desistindo avistou uma senhora no parque que estava dando migalhas de pão para os pombos, ele(a) se aproximou e ficou fazendo aquela carinha de cachorro(a) pidão. Demorou para que sua presença fosse notada, mas a gentil senhora pegou da sua bolsa um pão e deu para nosso(a) amigo(a)')
                 print()
                 personagem.muda_fome(10)
                 personagem.muda_energia(10)
                 personagem.muda_humor(10)
+                print()
             else:
                 print(f'Hoje {personagem.nome} acordou com o pé esquerdo! Apesar de procurar muito pela cidade ele(a) não conseguiu comida. Foi enxotado da frente de vários comércios, inclusive o dono do açougue jogou água nele(a) e o(a) chamou de vira-lata. Se não bastasse uma mulher passou apressada com celular e pisou em sua patinha. Coitado do nosso(a) amigo(a).')
                 print()
                 personagem.muda_energia(-10)
                 personagem.muda_humor(-10)
+                print()
     
     elif acao == 2:
         sorteio_amigo = randint(1,3)
@@ -87,6 +93,7 @@ def opcoes_padrao(relogio, personagem, acao):
             personagem.muda_fome(10)
             personagem.muda_energia(15)
             personagem.muda_humor(15)
+            print()
             personagem.muda_lugar("beco")
         elif sorteio_amigo == 2:
             personagem.muda_lugar("parque")
@@ -99,6 +106,7 @@ def opcoes_padrao(relogio, personagem, acao):
                 personagem.muda_energia(10)
                 personagem.muda_humor(10)
                 relogio.avanca_tempo(180)
+                print()
                 if relogio.dia >= 2:
                     print(f'{personagem.nome} continua a brincar quando sente uma mão lhe levantar,a dona do Bilu o pega carinhosamente no colo e segue em direção a saída do parque com Bilu os seguindo. {personagem.nome} nem pode acreditar no que está acontecendo, a dona de Bilu o abraça e diz "Se prepara menino(a) que hoje você ganhou um família e um irmão atrapalhado". Bilu corre alegremente balançando o rabo, sabendo que agora vai ter alguém para brincar. {personagem.nome} nem acredita na sorte que teve hoje, e mal consegue conter seu rabo, que gira sem parar. ')
                     sleep(1)
@@ -110,6 +118,7 @@ def opcoes_padrao(relogio, personagem, acao):
                 personagem.muda_energia(-5)
                 personagem.muda_humor(-10)
                 relogio.avanca_tempo(20)
+                print()
 
         else:
             print(f'Hoje o mar não está para peixe, ou melhor para cachorros... {personagem.nome} procurou nos parques e nos portões das casas, mas não encontrou nenhum amigo... "Talvez seja melhor tentar mais tarde. Talvez ainda estejam dormindo", pensa nosso(a) amigo(a).')
@@ -118,6 +127,7 @@ def opcoes_padrao(relogio, personagem, acao):
             personagem.muda_energia(-10)
             personagem.muda_humor(10)
             relogio.avanca_tempo(180)
+            print()
             personagem.muda_lugar("jardim abandonado")
 
     elif acao == 3:
@@ -129,6 +139,7 @@ def opcoes_padrao(relogio, personagem, acao):
             relogio.avanca_tempo(180)
             personagem.muda_energia(-10)
             personagem.muda_humor(15) 
+            print()
             personagem.muda_lugar("trem abandonado")
         else:
             print(f'{personagem.nome} já esta acostumado(a) a andar pelos becos a procura de abrigo, mas esta noite em especial está mais difícil, os valentões do bairro vizinho estão por aqui, e com isso os melhores lugares ja estão ocupados."Talvez seja melhor tentar a sorte mais tarde", pensa nosso(a) amigo(a). Melhor não arrumar briga. "Tem dias que viver na rua não é fácil", pensa novamente. ')
@@ -136,6 +147,7 @@ def opcoes_padrao(relogio, personagem, acao):
             relogio.avanca_tempo(120)
             personagem.muda_energia(-15)
             personagem.muda_humor(-5)
+            print()
             personagem.muda_lugar("beco")
             if relogio.dia >= 2:
                     print(f'{personagem.nome} ouve um barulho e tenta se esconder no beco, fica apavorado(a) com a possibilidade de ser um dos valentões ou as crianças que há alguns dias haviam jogado pedras nele(a), e  em seguida sente uma mão lhe segurando, o corpo de nosso amigo fica todo rígido. {personagem.nome} levanta e olha para quem o segura e vê um senhor morador de rua, que fala baixinho: "Calma amiguinho(a) agora está tudo bem, vem comigo", e o abraça. {personagem.nome} ve bondade naqueles velhos olhos humildes e segue o velho para a saída do beco, eles vão em direção a ponte onde o velho tem uma pequena casa feita de madeira em direção, o velho lhe da um pouco de uma sobra de comida de uma marmita, que {personagem.nome} aceita de bom gosto, em seguida o homem entra e segurando algo pequeno nas mãos, quando {personagem.nome} olha nem pode acreditar, é um pequeno filhote de gato, tão pretinho que nem dá para ver os olhos, o velho passa um pote de leite para o gato, que toma tudo num instante. Notando o olhar intrigado de nosso(a) amigo(a) ele diz: "Resgatei essa aí do córrego, estava quase morrendo, e agora vive aqui comigo, igual a vc amiguinho(a). Agora seremos nós três a nossa família, iremos dividir tudo que temos e ficaremos bem". {personagem.nome} mal pode acreditar na sorte que esta tendo de encontrar alguém tão bom, e percebe qua as vezes quem menos tem é aquele que mais divide, e finalmente consegue relaxar e descansar. ')
@@ -154,7 +166,7 @@ def opcoes_padrao(relogio, personagem, acao):
         personagem.muda_energia(20)
         personagem.muda_fome(-10)
         personagem.muda_frio(5)
-
+        print()
 
 def print_delay(text, delay=0.01):
     for n in text:
@@ -190,6 +202,7 @@ def noite(personagem, relogio):
             personagem.muda_humor(10)
             personagem.muda_frio(-5)
             relogio.avanca_tempo(50)
+            print()
         elif comida_noite == 2:
             print(f'{personagem.nome}, conseguiu comida de segunda vez.')
             print()
@@ -198,6 +211,7 @@ def noite(personagem, relogio):
             personagem.muda_humor(5)
             personagem.muda_frio(-5)
             relogio.avanca_tempo(50)
+            print()
         else:
             print(f'{personagem.nome}, não conseguiu comida.')
             print()
@@ -206,6 +220,7 @@ def noite(personagem, relogio):
             personagem.muda_humor(-10)
             personagem.muda_frio(-5)
             relogio.avanca_tempo(50)
+            print()
     elif fase_noite == 2:
         abrigo_noite = randint(1, 3)
         while True:
@@ -217,6 +232,7 @@ def noite(personagem, relogio):
                 personagem.muda_humor(-20)
                 personagem.muda_frio(-20)
                 relogio.avanca_tempo(50)
+                print()
                 break
             elif abrigo_noite == 2:
                 print(f'{personagem.nome}, conseguiu abrigo de segunda vez.')
@@ -226,6 +242,7 @@ def noite(personagem, relogio):
                 personagem.muda_humor(10)
                 personagem.muda_frio(-5)
                 relogio.avanca_tempo(50)
+                print()
                 break
             else:
                 print(f'{personagem.nome}, não conseguiu abrigo.')
@@ -234,6 +251,7 @@ def noite(personagem, relogio):
                 personagem.muda_energia(10)
                 personagem.muda_humor(10)
                 personagem.muda_frio(-5)
+                print()
                 relogio.avanca_tempo(50)
 
                 opcao = input('''
@@ -246,6 +264,7 @@ def noite(personagem, relogio):
                         print()
                         personagem.muda_energia(-5)
                         personagem.muda_frio(-5)
+                        print()
                     else:
                         print('Você conseguiu achar um abrigo.')
                         print()
@@ -253,6 +272,7 @@ def noite(personagem, relogio):
                         personagem.muda_energia(15)
                         personagem.muda_humor(15)
                         personagem.muda_frio(5)
+                        print()
                         relogio.avanca_dia()
                         break
                 else:
@@ -262,6 +282,7 @@ def noite(personagem, relogio):
                     personagem.muda_energia(-10)
                     personagem.muda_humor(-10)
                     personagem.muda_frio(-10)
+                    print()
                     relogio.avanca_dia()
                     break
 

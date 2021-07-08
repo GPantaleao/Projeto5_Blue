@@ -15,4 +15,3 @@ if __name__ == '__main__':
     sleep(1)
     personagem = Personagem(nome)
     fase1(relogio, personagem)
-    
