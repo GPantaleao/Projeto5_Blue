@@ -2,6 +2,20 @@ from random import randint
 from rich import print
 from time import sleep
 from rich.prompt import Prompt
+import webbrowser  # para abrir links do bowser
+
+
+def final():
+    print ('\n[red]NÃO COMPRE ADOTE![red]\n')
+    print_delay (f'''
+    Segundo a OMS estima-se que só no Brasil existam mais de 30 milhões de animais abandonados, sendo cerca de 10 milhões de gatos e 20 milhões de cães. No mundo são cerca 200 milhões de animais. Como consta a pesquisa de 2020.
+
+    ''')
+    sleep(1)
+    links = str(input("Deseja conhecer Ongs que ajudam a animais abandonados, ou Ongs para adoção? [S/N] ")).upper()[0]
+    if links == 'S':
+       webbrowser.open('https://nfpet.com.br/blog/2019/08/10-ongs-de-animal-para-voce-ajudar/')
+       
 
 def opcoes_padrao(relogio, personagem, acao):
     if acao == 1:
@@ -35,7 +49,7 @@ def opcoes_padrao(relogio, personagem, acao):
                 if relogio.dia >= 2:
                     print(f'{personagem.nome} ouve um barulho e tenta se esconder entre os lixos, em seguida sente uma mão lhe segurando, com cuidado uma mulher lhe pega no colo e fala baixinho: "calma amiguinho(a) agora está tudo bem, eu vou te proteger", e abraça {personagem.nome} carinhosamente, e segue em direção a saída do beco {personagem.nome} nem pode acreditar no que está acontecendo, agora ele sabe o que pode acontecer quando alguns cachorros "somem" das ruas. Eles podem sim, ter um final feliz e encontrar um lar. ')
                     sleep(1)
-                    print('NÃO COMPRE, ADOTE!')
+                    final()
                     exit()
 
         elif comida == 2:
@@ -79,7 +93,7 @@ def opcoes_padrao(relogio, personagem, acao):
                 if relogio.dia >= 2:
                     print(f'{personagem.nome} continua a brincar quando sente uma mão lhe levantar,a dona do Bilu o pega carinhosamente no colo e segue em direção a saída do parque com Bilu os seguin do. {personagem.nome} nem pode acreditar no que está acontecendo, a dona de o abraça e diz "se prepara menino(a) que hoje você ganhou um família e um irmão atrapalhado". Bilu corre alegremente balançando o rabo, sabendo que agora vai ter alguém para brincar. {personagem.nome} nem acredita na sorte que teve hoje, e mal consegue conter seu rabo, que gira sem parar. ')
                     sleep(1)
-                    print('NÃO COMPRE, ADOTE!')
+                    final()
                     exit()
             else:
                 relogio.avanca_tempo(20)
@@ -113,7 +127,7 @@ def opcoes_padrao(relogio, personagem, acao):
             if relogio.dia >= 2:
                     print(f'{personagem.nome} ouve um barulho e tenta se esconder no beco, fica apavorado com a possibilidade de ser um dos valentões ou as crianças que ha alguns dias haviam jogado pedras nele, e  em seguida sente uma mão lhe segurando, o corpo de nosso amigo fica todo rígido. {personagem.nome} levanta e olha para quem o segura e vê um senhor morador de rua, que fala baixinho: "calma amiguinho(a) agora está tudo bem, vem comigo", e o abraça. {personagem.nome} ve bondade naqueles velhos olhos humildes e segue o velho para a saída do beco, eles vão em direção a ponte onde o velho tem uma pequena casa feita de madeira em direção, o velho lhe da um pouco de uma sobra de comida de uma marmita, que {personagem.nome} aceita de bom gosto, em seguida o homem entra e segurando algo pequeno nas mãos, qnd {personagem.nome} olha nem pode acreditar, é um pewueno filhote de gato, tão pretinho que nem dá para ver os olhos, o velho passa um pode para o gato de leite e toma tudo num instante. Notando o olhar intrigado de nosso amigo ele diz: "Resgatei essa aí do córrego, estava quase morrendo, e agora vive aqui comigo, igual a vc amiguinho(a). Agora seremos nós três a nossa família, iremos dividir tudo que temos e ficaremos bem." {personagem.nome} mal pode acreditar na sorte que esta tendo de encontrar alguém tão bom, e percebe qua as vezes quem menos tem é aquele que mais divide, e finalmente consegue relaxar e descansar. ')
                     sleep(1)
-                    print('NÃO COMPRE, ADOTE!')
+                    final()
                     exit()
 
     elif acao == 4:
