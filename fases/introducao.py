@@ -36,7 +36,7 @@ Mas a vida nas ruas não é fácil, então fique atento nas necessidades do cão
 
                                   .-.
      (___________________________()6 `-,
-     (   __  Começando o Jogo  _   /''"`
+     (   __ Começando o Jogo __   /''"`
      //\\                      //\\
      "" ""                     "" ""
        [blue] ''')
