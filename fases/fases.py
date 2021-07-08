@@ -8,7 +8,7 @@ from rich.prompt import Prompt #Pra mudar a cor no input
 from auxiliar.funcoes_auxiliares import final
      
 def fase1(relogio, personagem):
-    print(f'São {str(relogio)}, do {relogio.dia}° dia, {personagem.nome} encontra-se em um {personagem.lugar}.')
+    print(f'\nSão {str(relogio)}, do {relogio.dia}° dia, {personagem.nome} encontra-se em um {personagem.lugar}.')
     print(personagem)
     sleep(1)
 

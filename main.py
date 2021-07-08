@@ -4,6 +4,7 @@ from classes.relogio import Relogio
 from classes.carrocinha import Carrocinha
 from fases.introducao import Introducao
 from fases.fases import fase1
+from time import sleep
 
 
 if __name__ == '__main__':
@@ -11,6 +12,7 @@ if __name__ == '__main__':
     intro.executar()   ####NÃO ESQUECER DE TIRAR DE COMENTARIO DEPOIS
     relogio = Relogio()
     nome = input('Digite o nome do seu cãozinho: '). title()
+    sleep(1)
     personagem = Personagem(nome)
     fase1(relogio, personagem)
     
