@@ -129,9 +129,7 @@ Agradecemos às seguintes pessoas que contribuíram para este projeto:
 
 ## Não compre, adote! <br> 🐶
 
-Quer conhecer proetos de adoção? Clique [AQUI](CONTRIBUTING.md) e leia como adotar.
-
-
+Quer conhecer projetos de adoção? Clique [AQUI](https://nfpet.com.br/blog/2019/08/10-ongs-de-animal-para-voce-ajudar/d) e leia como adotar.
 
 
 [⬆ Voltar ao topo](#Projeto)<br>
