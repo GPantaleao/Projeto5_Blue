@@ -1,8 +1,10 @@
-from classes.relogio import Relogio
 from sys import exit
+
 from fases.fases import fase1
-from classes.carrocinha import Carrocinha
 from auxiliar.funcoes_auxiliares import final
+
+from classes.relogio import Relogio
+from classes.carrocinha import Carrocinha
 
 def gameOver():
     print('Game Over!')
