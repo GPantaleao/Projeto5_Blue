@@ -4,8 +4,7 @@ from time import sleep
 from rich.prompt import Prompt
 from pygame import mixer
 import webbrowser  # para abrir links do bowser
-from classes.carrocinha import validar_input
-
+from auxiliar.validacoes import validar_input
 
 def final():
     print ('\n[red]NÃO COMPRE ADOTE![red]\n')

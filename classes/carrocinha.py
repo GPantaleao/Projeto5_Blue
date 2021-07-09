@@ -183,10 +183,3 @@ class Carrocinha:
                                 relogio.avanca_tempo(720)
                                 noite(personagem, relogio)
                                 break
-
-
-def validar_input(opcao_digitada, opcoes_validas, relogio, personagem):
-    if opcao_digitada not in opcoes_validas:
-        print(' Você pensou que podia fugir digitando uma opção inválida')
-        carrocinha = Carrocinha()
-        carrocinha.carrocinha(relogio,personagem)

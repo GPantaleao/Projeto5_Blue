@@ -2,7 +2,7 @@
 from auxiliar.funcoes_auxiliares import latido_inicio, opcoes_padrao
 from random import randint
 from classes.carrocinha import Carrocinha
-from classes.carrocinha import validar_input 
+from auxiliar.validacoes import validar_input 
 from rich import print
 from time import sleep
 from rich.prompt import Prompt  # Pra mudar a cor no input
