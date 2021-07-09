@@ -1,14 +1,20 @@
-
-from auxiliar.funcoes_auxiliares import latido_inicio, opcoes_padrao
 from random import randint
-from classes.carrocinha import Carrocinha
-from auxiliar.validacoes import validar_input 
-from rich import print
 from time import sleep
-from rich.prompt import Prompt  # Pra mudar a cor no input
-from auxiliar.funcoes_auxiliares import final
-# importando a função latido
+
+try:
+    from rich import print
+except ModuleNotFoundError:
+    print(f'''Você precisa do módulo 'rich' para rodar o programa!
+              Terminal: pip install rich      
+           ''')
+
+from classes.carrocinha import Carrocinha
+from rich.prompt import Prompt # Pra mudar a cor no input
+
+from auxiliar.funcoes_auxiliares import final # importando a função latido
 from auxiliar.funcoes_auxiliares import latido, cao_hostil, cao_correndo1, cao_amigo, cao_chorando2, cachorro_chorando, cao_correndo2
+from auxiliar.funcoes_auxiliares import latido_inicio, opcoes_padrao
+from auxiliar.validacoes import validar_input 
 
 def fase1(relogio, personagem):
     print(f'\nSão {str(relogio)}, do {relogio.dia}° dia, {personagem.nome} encontra-se em um {personagem.lugar}.')

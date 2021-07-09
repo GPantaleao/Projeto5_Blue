@@ -1,10 +1,28 @@
 from random import randint
-from rich import print
 from time import sleep
-from rich.prompt import Prompt
-from pygame import mixer
-import webbrowser  # Para abrir links do bowser
 
+try:
+    from rich import print
+except ModuleNotFoundError:
+    print(f'''Você precisa do módulo 'rich' para rodar o programa!
+              Terminal: pip install 'rich'        
+           ''')
+
+try:
+    from pygame import mixer
+except ModuleNotFoundError:
+    print(f'''Você precisa do módulo 'pygame' para rodar o programa!
+              Terminal: pip install pygame        
+           ''')
+
+try:
+    import webbrowser  # Para abrir links do bowser
+except ModuleNotFoundError:
+    print(f'''Você precisa do módulo 'webbrowser' para rodar o programa!
+              Terminal: pip install webbrowser        
+           ''')
+
+from rich.prompt import Prompt
 
 def final(): # Função é mostrada ao final da historia, ou game over
     print ('\n[red]NÃO COMPRE ADOTE![red]\n')

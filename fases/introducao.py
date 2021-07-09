@@ -1,10 +1,21 @@
 from time import sleep
-from tqdm import tqdm  # Importa a barra de carregamento#
-from auxiliar.funcoes_auxiliares import print_delay
-from rich import print
 
-# Importando a função da musica inicial
-from auxiliar.funcoes_auxiliares import musica_incial
+try:
+    from tqdm import tqdm  # Importa a barra de carregamento#
+except ModuleNotFoundError:
+    print(f'''Você precisa do módulo 'tdqm' para rodar o programa!
+              Terminal: pip install tdqm        
+           ''')
+
+try:
+    from rich import print
+except ModuleNotFoundError:
+    print(f'''Você precisa do módulo 'rich' para rodar o programa!
+              Terminal: pip install rich       
+           ''')
+           
+from auxiliar.funcoes_auxiliares import print_delay
+from auxiliar.funcoes_auxiliares import musica_incial # Importando a função da musica inicial
 
 
 
