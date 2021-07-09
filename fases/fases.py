@@ -2,6 +2,7 @@
 from auxiliar.funcoes_auxiliares import latido_inicio, opcoes_padrao
 from random import randint
 from classes.carrocinha import Carrocinha
+from auxiliar.validacoes import validar_input 
 from rich import print
 from time import sleep
 from rich.prompt import Prompt  # Pra mudar a cor no input
@@ -24,17 +25,7 @@ def fase1(relogio, personagem):
     [/blue]
     '''))
 
-    while acao1 not in [1, 2, 3, 4]:
-        print('Opção inválida.')
-        acao1 = int(Prompt.ask(f'''
-    O que {personagem.nome} vai fazer?
-    [blue]
-    1- Procurar comida
-    2- Procurar alguém para brincar
-    3- Procurar um abrigo
-    4- Voltar a dormir
-    [/blue]
-    '''))
+    validar_input(acao1, [1, 2, 3, 4], relogio, personagem)
 
     opcoes_padrao(relogio, personagem, acao1)
     sleep(1)
@@ -57,6 +48,9 @@ def fase2(relogio, personagem, opcao_escolhida1): #Aprensenta a escolha, e a sit
     print('[blue]5- Explorar a região[/blue]')
 
     acao2 = int(input('\nQual será sua próxima ação?\n'))
+    
+    validar_input(acao2, [1, 2, 3, 4, 5], relogio, personagem)
+    
     opcoes_padrao(relogio, personagem, acao2)
     if acao2 == 5: #Condição que define randomicamente o local onde o Cão irá explorar 
         sorteio_passeio = randint(1, 4) #Random que define qual o destino do cão

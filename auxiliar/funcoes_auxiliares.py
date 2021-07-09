@@ -29,6 +29,16 @@ def opcoes_padrao(relogio, personagem, acao): # Função PRINCIPAL que faz toda 
         
         '''))
 
+        while comida not in [1, 2]:
+            comida = int(Prompt.ask(f'''
+        '\nOnde {personagem.nome} vai procurar comida?:
+        [blue]
+        1- Nas sobras dos lixos.
+        2- Tentar encontrar alguém para dar.
+        [blue]
+        
+        '''))
+
         if comida == 1:
             
             sorteio_comida = randint(1,3) # Random para opção COMIDA
@@ -220,6 +230,11 @@ def noite(personagem, relogio):
                            1 - Procurar comida
                            2 - Procurar abrigo
                            '''))
+    while fase_noite not in [1, 2]:
+        fase_noite = int(Prompt.ask('''
+                           1 - Procurar comida
+                           2 - Procurar abrigo
+                           '''))
 
     if fase_noite == 1:
         comida_noite = randint(1, 3)
@@ -331,7 +346,6 @@ def noite(personagem, relogio):
                     print()
                     relogio.avanca_dia()
                     break
-
 
 # definções de efeitos sonoros para cada evento
 
