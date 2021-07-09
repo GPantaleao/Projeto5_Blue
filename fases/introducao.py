@@ -6,8 +6,7 @@ from rich import print
 # importando a função da musica inicial
 from auxiliar.funcoes_auxiliares import musica_incial
 
-# importando a biblioteca para limpar tela
-import subprocess as cls
+
 
 
 class Introducao:
@@ -50,5 +49,6 @@ Mas a vida nas ruas não é fácil, então fique atento nas necessidades do cão
        [blue] ''')
         for i in tqdm(range (150)): #cria um indicador de carregamento#
             sleep(0.0001)
-        sleep(2)
-        cls.call('cls', shell=True)  # chamando a função de limpar tela
+        print()
+        sleep(1)
+       

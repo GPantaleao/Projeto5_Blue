@@ -60,7 +60,7 @@ def fase2(relogio, personagem, opcao_escolhida1):
     opcoes_padrao(relogio, personagem, acao2)
     if acao2 == 5:
         sorteio_passeio = randint(1, 4)
-        relogio.avanca_tempo(50)
+        relogio.avanca_tempo(120)
         if sorteio_passeio == 1:
             personagem.muda_lugar("parque")
             print(f'"Uma volta no parque sempre é uma boa ideia", pensa {personagem.nome}...')
