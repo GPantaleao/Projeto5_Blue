@@ -86,7 +86,7 @@ Agradecemos às seguintes pessoas que contribuíram para este projeto:
         <img src="https://avatars.githubusercontent.com/u/85652089" width="100px;" alt="Foto do Gustavo Silva no GitHub"/><br>
         <sub>
         <a href="https://github.com/SSilvaGustavo">
-          SSilva Gustavo</</a>
+          Gustavo Souza</</a>
         </sub>
       </a>
     </td>
