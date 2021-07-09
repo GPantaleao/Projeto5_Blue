@@ -245,13 +245,17 @@ def noite(personagem, relogio):
     print(f'O que {personagem.nome} fará agora?')
     sleep(1)
     fase_noite = int(Prompt.ask('''
+                            [blue]
                            1 - Procurar comida
                            2 - Procurar abrigo
+                           [/blue]
                            '''))
     while fase_noite not in [1, 2]:
         fase_noite = int(Prompt.ask('''
+                            [blue]
                            1 - Procurar comida
                            2 - Procurar abrigo
+                           [/blue]
                            '''))
 
     if fase_noite == 1:

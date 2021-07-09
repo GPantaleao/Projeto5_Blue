@@ -17,9 +17,11 @@ class Carrocinha:
 
         pepate = PePaTe()
         dado = Dados()
-        escolha = int(input(''' 
+        escolha = int(Prompt.ask(''' 
+        [blue]
         1 - Fugir
-        2 - Esconder
+        2 - Esconder 
+        [/blue]
         Escolha: ''')) #Escolha do usuario para as seguintes opções
         if escolha == 1: #Escolha Fugir
             sorteio_carrocinha = randint(1,2) #Sorteia um número para validação
