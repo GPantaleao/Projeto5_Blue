@@ -2,9 +2,9 @@
 
 # Projeto 5  Blue EdTech - Vida de Cão 🐶
 
-<center> 
-<img src="./auxiliar/images/blue.jpg" alt="blue">
-</center>
+<p align="center">
+<img src="./auxiliar/images/blue.jpg" alt="blue" style =>
+</p>
 
 ## Inicio do jogo
 <img src="./auxiliar/images/Sabrino.PNG" alt="Tela incial">
