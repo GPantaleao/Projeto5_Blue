@@ -2,6 +2,7 @@ from random import randint
 from time import sleep
 from classes.PePaTe import PePaTe
 from classes.dados import Dados
+from rich.prompt import Prompt
 from auxiliar.funcoes_auxiliares import correntes_carrocinha, final
 from auxiliar.funcoes_auxiliares import noite
 from auxiliar.funcoes_auxiliares import latido, cao_correndo1, cao_chorando2, cachorro_chorando, cao_correndo2
@@ -14,9 +15,11 @@ class Carrocinha:
 
         pepate = PePaTe()
         dado = Dados()
-        escolha = int(input(''' 
+        escolha = int(Prompt.ask(''' 
+        [blue]
         1 - Fugir
-        2 - Esconder
+        2 - Esconder 
+        [/blue]
         Escolha: ''')) #Escolha do usuario para as seguintes opções
         if escolha == 1: #Escolha Fugir
             sorteio_carrocinha = randint(1,2) #Sorteia um número para validação
