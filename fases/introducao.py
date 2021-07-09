@@ -1,9 +1,9 @@
 from time import sleep
-from tqdm import tqdm  # importa a barra de carregamento#
+from tqdm import tqdm  # Importa a barra de carregamento#
 from auxiliar.funcoes_auxiliares import print_delay
 from rich import print
 
-# importando a função da musica inicial
+# Importando a função da musica inicial
 from auxiliar.funcoes_auxiliares import musica_incial
 
 
@@ -14,7 +14,7 @@ class Introducao:
         pass
 
     def executar(self):
-        musica_incial()  # chamando a função da musica inicial
+        musica_incial()  # Chamando a função da musica inicial
         print(f'''[blue]
            ,-.___,-.
            \_/_ _\_/
@@ -47,7 +47,7 @@ Mas a vida nas ruas não é fácil, então fique atento nas necessidades do cão
      //\\                      //\\
      "" ""                     "" ""
        [blue] ''')
-        for i in tqdm(range (150)): #cria um indicador de carregamento#
+        for i in tqdm(range (150)): #Cria um indicador de carregamento#
             sleep(0.0001)
         print()
         sleep(1)
