@@ -1,10 +1,13 @@
 from random import randint
 from time import sleep
-from classes.PePaTe import PePaTe
-from classes.dados import Dados
+
 from auxiliar.funcoes_auxiliares import correntes_carrocinha, final
 from auxiliar.funcoes_auxiliares import noite
 from auxiliar.funcoes_auxiliares import latido, cao_correndo1, cao_chorando2, cachorro_chorando, cao_correndo2
+
+from classes.PePaTe import PePaTe
+from classes.dados import Dados
+
 class Carrocinha:
 
     # Pegando parametros relogio e personagem, para usar no main
