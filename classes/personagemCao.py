@@ -10,7 +10,7 @@ def gameOver():
     reiniciar = input('Gostaria de jogar novamente (s/n)? ')
     if reiniciar == 's':
         relogio = Relogio()
-        nome = input('Digite o nome do seu cãozinho: '). title()
+        nome = input('Digite o nome do seu cãozinho: ').title()
         personagem = Personagem(nome)
         fase1(relogio, personagem)
     else:
@@ -41,9 +41,9 @@ class Personagem:
     def muda_humor(self,humor_novo):
         humnov = humor_novo
         if humnov >= 0:
-            print(f'''                                                Humor + {humnov}%''')
+            print(f'''Humor +{humnov}%''')
         else:
-            print(f'''                                                Humor - {abs(humnov)}%''')
+            print(f'''Humor -{abs(humnov)}%''')
         self.__humor += humnov
         if self.__humor >= 100:
             self.__humor = 100
@@ -55,9 +55,9 @@ class Personagem:
     def muda_fome(self,fome_nova):
         fomnov = fome_nova
         if fomnov >= 0:
-            print(f'''                                                Fome + {fomnov}%''')
+            print(f'''Fome +{fomnov}%''')
         else:
-            print(f'''                                                Fome - {abs(fomnov)}%''')
+            print(f'''Fome -{abs(fomnov)}%''')
         self.__fome += fomnov
         if self.__fome >= 100:
             self.__fome = 100
@@ -68,9 +68,9 @@ class Personagem:
     def muda_frio(self,frio_novo):
         frinov = frio_novo
         if frinov >= 0:
-            print(f'''                                                Frio + {frinov}%''')
+            print(f'''Frio +{frinov}%''')
         else:
-            print(f'''                                                Frio - {abs(frinov)}%''')
+            print(f'''Frio -{abs(frinov)}%''')
         self.__frio += frinov
         if self.__frio >= 100:
             self.__frio = 100
@@ -82,9 +82,9 @@ class Personagem:
     def muda_energia(self,nova_energia):
         enenov = nova_energia
         if enenov >= 0:
-            print(f'''                                                Energia + {enenov}%''')
+            print(f'''Energia +{enenov}%''')
         else:
-            print(f'''                                                Energia - {abs(enenov)}%''')
+            print(f'''Energia -{abs(enenov)}%''')
         self.__energia += enenov
         if self.__energia >= 100:
             self.__energia = 100

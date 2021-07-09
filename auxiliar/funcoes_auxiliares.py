@@ -40,6 +40,7 @@ def opcoes_padrao(relogio, personagem, acao):
                 personagem.muda_fome(15)
                 personagem.muda_energia(10)
                 personagem.muda_humor(5)
+                print()
             elif sorteio_comida == 2:
                 personagem.muda_lugar("beco")
                 print(f'\nHoje o dia não foi muito bom! {personagem.nome} teve que vasculhar em muitos lixos para conseguir comida, e algumas delas já não estavam muito boas...')
@@ -47,11 +48,13 @@ def opcoes_padrao(relogio, personagem, acao):
                 personagem.muda_fome(10)
                 personagem.muda_energia(5)
                 personagem.muda_humor(5)
+                print()
             else:
                 print(f'\nHoje {personagem.nome} está sem sorte! Apesar de procurar em muitos lixos ele(a) não conseguiu nada. Ouviu esse barulho...é a barriguinha do(a) nosso(a) amigo(a).')
                 print()
                 personagem.muda_energia(-10)
                 personagem.muda_humor(-5)
+                print()
                 if relogio.dia >= 2:
                     print(f'\n{personagem.nome} ouve um barulho e tenta se esconder entre os lixos, em seguida sente uma mão lhe segurando. Com cuidado uma mulher lhe pega no colo e fala baixinho: "Calma amiguinho(a) agora está tudo bem, eu vou te proteger", e abraça {personagem.nome} carinhosamente, e segue em direção a saída do beco. {personagem.nome} nem pode acreditar no que está acontecendo, agora ele sabe o que pode acontecer quando alguns cachorros "somem" das ruas. Eles podem sim, ter um final feliz e encontrar um lar. ')
                     sleep(1)
@@ -68,6 +71,7 @@ def opcoes_padrao(relogio, personagem, acao):
                 personagem.muda_fome(20)
                 personagem.muda_energia(15)
                 personagem.muda_humor(10)
+                print()
             elif sorteio_comida == 2:
                 personagem.muda_lugar("parque")
                 print(f'Hoje o dia não foi muito bom! {personagem.nome} teve que andar muito pela cidade para conseguir comida, quando já estava quase desistindo avistou uma senhora no parque que estava dando migalhas de pão para os pombos, ele(a) se aproximou e ficou fazendo aquela carinha de cachorro(a) pidão. Demorou para que sua presença fosse notada, mas a gentil senhora pegou da sua bolsa um pão e deu para nosso(a) amigo(a)')
@@ -75,12 +79,14 @@ def opcoes_padrao(relogio, personagem, acao):
                 personagem.muda_fome(10)
                 personagem.muda_energia(10)
                 personagem.muda_humor(10)
+                print()
             else:
                 personagem.muda_lugar("beco")
                 print(f'Hoje {personagem.nome} acordou com o pé esquerdo! Apesar de procurar muito pela cidade ele(a) não conseguiu comida. Foi enxotado da frente de vários comércios, inclusive o dono do açougue jogou água nele(a) e o(a) chamou de vira-lata. Se não bastasse uma mulher passou apressada com celular e pisou em sua patinha. Coitado do nosso(a) amigo(a).')
                 print()
                 personagem.muda_energia(-10)
                 personagem.muda_humor(-10)
+                print()
     
     elif acao == 2:
         sorteio_amigo = randint(1,3)
@@ -92,6 +98,7 @@ def opcoes_padrao(relogio, personagem, acao):
             personagem.muda_fome(10)
             personagem.muda_energia(15)
             personagem.muda_humor(15)
+            print()
             personagem.muda_lugar("beco")
         elif sorteio_amigo == 2:
             personagem.muda_lugar("parque")
@@ -106,6 +113,7 @@ def opcoes_padrao(relogio, personagem, acao):
                 personagem.muda_energia(10)
                 personagem.muda_humor(10)
                 relogio.avanca_tempo(180)
+                print()
                 if relogio.dia >= 2:
                     print(f'\n{personagem.nome} continua a brincar quando sente uma mão lhe levantar,a dona do Bilu o pega carinhosamente no colo e segue em direção a saída do parque com Bilu os seguindo. {personagem.nome} nem pode acreditar no que está acontecendo, a dona de Bilu o abraça e diz "Se prepara menino(a) que hoje você ganhou um família e um irmão atrapalhado". Bilu corre alegremente balançando o rabo, sabendo que agora vai ter alguém para brincar. {personagem.nome} nem acredita na sorte que teve hoje, e mal consegue conter seu rabo, que gira sem parar. ')
                     sleep(1)
@@ -117,6 +125,7 @@ def opcoes_padrao(relogio, personagem, acao):
                 personagem.muda_energia(-5)
                 personagem.muda_humor(-10)
                 relogio.avanca_tempo(20)
+                print()
 
         else:
             personagem.muda_lugar("quintal das casas")
@@ -126,6 +135,7 @@ def opcoes_padrao(relogio, personagem, acao):
             personagem.muda_energia(-10)
             personagem.muda_humor(10)
             relogio.avanca_tempo(180)
+            print()
             personagem.muda_lugar("jardim abandonado")
 
     elif acao == 3:
@@ -138,6 +148,7 @@ def opcoes_padrao(relogio, personagem, acao):
             relogio.avanca_tempo(180)
             personagem.muda_energia(-10)
             personagem.muda_humor(15) 
+            print()
             personagem.muda_lugar("trem abandonado")
         else:
             personagem.muda_lugar("becos")
@@ -146,6 +157,7 @@ def opcoes_padrao(relogio, personagem, acao):
             relogio.avanca_tempo(120)
             personagem.muda_energia(-15)
             personagem.muda_humor(-5)
+            print()
             personagem.muda_lugar("beco")
             if relogio.dia >= 2:
                     personagem.muda_lugar("becos")
@@ -165,7 +177,7 @@ def opcoes_padrao(relogio, personagem, acao):
         personagem.muda_energia(20)
         personagem.muda_fome(-10)
         personagem.muda_frio(5)
-
+        print()
 
 def print_delay(text, delay=0.01):
     for n in text:
@@ -203,6 +215,7 @@ def noite(personagem, relogio):
             personagem.muda_humor(10)
             personagem.muda_frio(-5)
             relogio.avanca_tempo(50)
+            print()
         elif comida_noite == 2:
             print(f'\n{personagem.nome} sai a procura de comida, mas o medo de ser pego pela carrocinha ainda paira no ar. Então com muito cuidado passa nos lixos de costume, mas não encontra nada, o lixeiro já havia passado e recolhido todos os sacos. Sua barriguinha já ronca ruidosamente quando passa perto de uma lixeira de um  casarão e encontra uma caixa com sobras de pizza, "Hummm, nada mal... um pouquinho dura, mas ainda está ótimo", pensa nosso(a) amigo(a) devorando as pizzas.')
             print()
@@ -212,6 +225,7 @@ def noite(personagem, relogio):
             personagem.muda_humor(5)
             personagem.muda_frio(-5)
             relogio.avanca_tempo(50)
+            print()
         else:
             print(f'{personagem.nome} já esta com a barriguinha roncando, entretanto esta com medo de se aventurar atras de comida, e tenta procurar os lixos próximos ao beco, mas o lixeiro ja havia passado e nosso(a) amigo(a) ficará com a barriguinha vazia e muito ruidosa essa noite.')
             print()
@@ -221,6 +235,7 @@ def noite(personagem, relogio):
             personagem.muda_humor(-10)
             personagem.muda_frio(-5)
             relogio.avanca_tempo(50)
+            print()
     elif fase_noite == 2:
         abrigo_noite = randint(1, 3)
         while True:
@@ -233,6 +248,7 @@ def noite(personagem, relogio):
                 personagem.muda_humor(-20)
                 personagem.muda_frio(-20)
                 relogio.avanca_tempo(180)
+                print()
                 break
             elif abrigo_noite == 2:
                 print(f'\n{personagem.nome} acredita que seja melhor procurar um lugar seguro para descansar, apesar da fome não pode correr riscos de ser apanhado, então com a barriguinha roncando tenta se abrigar numa casa abandonada entretanto ela ja esta ocupada por um cães valentões que o espantam e o mais que depressa ele corre, e se esconde no beco atras de uma caixas vazias.')
@@ -243,6 +259,7 @@ def noite(personagem, relogio):
                 personagem.muda_humor(10)
                 personagem.muda_frio(-5)
                 relogio.avanca_tempo(50)
+                print()
                 break
             else:
                 print(f'Mesmo receoso {personagem.nome} procura um novo lugar para se abrigar, mas está difícil, está muito frio e todos os lugares já estão ocupados, e agora nosso(a) amigo(a) não tem mais para onde ir, vai ter que descansar no frio dos becos úmidos mesmo.')
@@ -252,6 +269,7 @@ def noite(personagem, relogio):
                 personagem.muda_energia(10)
                 personagem.muda_humor(10)
                 personagem.muda_frio(-5)
+                print()
                 relogio.avanca_tempo(50)
 
                 opcao = input(f'''
@@ -264,6 +282,7 @@ def noite(personagem, relogio):
                         print()
                         personagem.muda_energia(-5)
                         personagem.muda_frio(-5)
+                        print()
                     else:
                         print(f'\n{personagem.nome} acredita que seja melhor procurar um lugar seguro para descansar, apesar da fome não pode correr riscos de ser apanhado, então com a barriguinha roncando tenta se abrigar numa casa abandonada entretanto ela ja esta ocupada por um cães valentões que o espantam e o mais que depressa ele corre, e se esconde no beco atras de uma caixas vazias.')
                         print()
@@ -272,6 +291,7 @@ def noite(personagem, relogio):
                         personagem.muda_energia(15)
                         personagem.muda_humor(15)
                         personagem.muda_frio(5)
+                        print()
                         relogio.avanca_dia()
                         break
                 else:
@@ -282,6 +302,7 @@ def noite(personagem, relogio):
                     personagem.muda_energia(-10)
                     personagem.muda_humor(-10)
                     personagem.muda_frio(-10)
+                    print()
                     relogio.avanca_dia()
                     break
 

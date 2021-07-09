@@ -21,10 +21,12 @@ class Carrocinha:
             if sorteio_carrocinha == 1: #Cao conseguiu fugir
                 relogio.avanca_tempo(80)
                 print(f'{personagem.nome} corre apressado(a) entre as ruas, fugindo do carro da carrocinha e daquele homem uniformizado que insiste em tentar laçar seu pescoço. Entre os becos encontra um lugar seguro atrás de umas caixas jogadas, depois dessa longa perseguição se sente exausto(a) e assustado(a).')
-                personagem.muda_lugar("beco")
+                print()
                 personagem.muda_fome(10)
                 personagem.muda_energia(10)
                 personagem.muda_humor(10)
+                print()
+                personagem.muda_lugar("beco")
                 relogio.avanca_dia()
             elif sorteio_carrocinha == 2:  # Cao não conseguiu fugir
                 print(f'{personagem.nome} corre desesperadamente para se safar, passando correndo entre as pessoas que somente observam a cena, ele(a) implora ajuda, entretanto ninguém faz nada, somente observa a situação. Ele(a) corre para uma rua estreita na esperança de se esconder, entretanto não há saída e nosso(a) amigo(a) é capturado(a) pelo homem uniformizado')
@@ -42,20 +44,25 @@ class Carrocinha:
                         if pepate.jogadaCao == True:
                             relogio.avanca_tempo(80)
                             print(f'\nDeu certo!!! Você conseguiu criar uma distração e ajudar {personagem.nome}. E agora nosso(a) amigo(a) foge o mais rápido do que pode. Ele(a) precisa se esconder e se acalmar depois desse susto. Virando um quarteirão ele(a) encontra uma casebre abandonado e se esconde lá.')
+                            print()
                             personagem.muda_lugar("casebre abandonado")
                             personagem.muda_fome(-15)
                             personagem.muda_energia(-15)
                             personagem.muda_humor(-5)
+                            print()
+                            personagem.muda_lugar("casebre abandonado")
                             relogio.avanca_dia()
                             break
                     else:
                         print(f"\nNem sempre com agilidade e malandragem das ruas é fácil conseguir fugir, apesar de muita luta, {personagem.nome} é levado(a) para uma gaiola apertada da carrocinha, cheio de medo chora assustado(a)")
                         personagem.muda_lugar('canto frio da carrocinha')
                         if relogio.dia == 1: #Se o dia for igual a 1 o cachorro nao tem a opção de ser adotado (apenas a partir do dia 2)
+                            print()
                             personagem.muda_fome(-15)
                             personagem.muda_energia(-15)
                             personagem.muda_humor(-10)
                             personagem.muda_frio(-5)
+                            print()
                             relogio.avanca_tempo(720)
                             print(f'''\nAs horas se arrastam e {personagem.nome} não tem noção alguma de quanto tempo já está preso(a). O medo toma conta do seu coração, preso naquele lugar pequeno e frio ja não sabe o que pode fazer para fugir. Olha para os lados e vê gaiolas e mais gaiolas empilhadas cheias de cachorros de varias tamanhos, alguns velhos, outros doentes, mas também alguns pequenos filhotes que parecem ter meses de vida. {personagem.nome} vendo isso pensa, "Como pode existir um lugar tão triste como esse?" Os minutos continuam a passar se transformando em horas e mais horas, algumas vezes os homens uniformizados abrem as gaiolas para limpar as sujeiras e levar um pouco de ração seca, que nem se da vontade de comer, e é num desses momentos em que nosso(a) amigo(a) vê uma oportunidade para fugir... O homem uniformizado entra pela porta e a deixa encostada, vai limpando as gaiolas e colocando as comidas, quando tira o jornal sujo da gaiola e se vira para jogar no lixo, {personagem.nome} aproveita e pula de dentro da gaiola e corre para a porta a fora. Começa uma gritaria e correria atras, mas nosso(a) amigo(a) corre desesperamente em busca da liberdade, e se esconde em um beco escuro.''')
                             personagem.muda_lugar("beco escuro")
@@ -73,11 +80,13 @@ class Carrocinha:
                                 exit()
                             else:
                                 print(f'''\n{personagem.nome} se ve preso(a) num lugar frio e escuro, apenas consegue distinguir formas de outros cachorros presos nas nas gaiolas vizinhas, seu coração está triste e pesado com a posibilidade de ter que ficar lá para toda a sua vida, não tem noção alguma de quanto tempo já ali, mas parece que longas horas já se passaram. {personagem.nome} percebe que sempre eles vem com colocar a comida e trocar os jornais e deixam a porta entreaberta, e com isso tem a ideia de fugir em algum momento de distração do homem uniformizado. A tarde essa oportunidade surge, o homem uniformizaso abre a gaiola e tira o jornal, quando se vira para jogar no e lixo nosso(a) amigo(a) pula para fora da gaiola apressado e corre para a porta. Enquanto isso o homem grita e xinga para ele(a) voltar, sem hesitar continua a correr, mas antes mesmo de passar pela segunda porta é pego(a) por um guarda, ele(a) continua se debatendo e acaba o fazendo escorregar e solta {personagem.nome} que corre rumo a liberdade, se escondendo o mais rápido possível em um beco.''')
-                                personagem.muda_lugar("beco úmido") 
+                                print()
                                 personagem.muda_fome(-10)
                                 personagem.muda_energia(-10)
                                 personagem.muda_humor(-10)
                                 personagem.muda_frio(-5)
+                                print()
+                                personagem.muda_lugar("beco úmido") 
                                 relogio.avanca_tempo(720) #12h após sair da carrocinha 
                                 noite(personagem, relogio)
                                 break
@@ -87,10 +96,13 @@ class Carrocinha:
             if sorteio_carrocinha == 1:#Conseguiu se esconder
                 relogio.avanca_tempo(80)
                 print(f'\n{personagem.nome} corre sem rumo entra as ruas, sem se atrever a olhar para tras, corre tanto que suas pernas estavam ja cansadas e tremendo, desesperado(a) procura um lugar seguro para que possa se esconder até a situação acalmar, entre os becos encontra um casebre abandonado com uma fresta quebrada na porta, e com esforço, rastejando consegue entrar e ficar seguro(a) até que a poeira abaixe.')
+                print()
                 personagem.muda_lugar("casebre abandonado")
                 personagem.muda_fome(15)
                 personagem.muda_energia(10)
                 personagem.muda_humor(5)
+                print()
+                personagem.muda_lugar("casebre abandonado")
             elif sorteio_carrocinha == 2: #Não conseguiu se esconder
                 print(f'{personagem.nome} corre assustado(a) entre os carros, desesperado(a) não tem ideia onde está e como pode se esconder. Mas logo atras estão os homens uniformizados o(a) perseguindo novamente e conseguem alcança-lo(a) antes de conseguir se esconder...\n''')
                 sleep(1)
@@ -103,19 +115,23 @@ class Carrocinha:
                         if dado.caoDado == True:
                             relogio.avanca_tempo(80)
                             print(f'\nApós a sua distração, {personagem.nome} consegue fugir apressadamente entre os carros e depistar os homens uniformizados e ainda muito assustado(a) busca refugio entre os carros de um pátio abandonado.\n')
-                            personagem.muda_lugar("pátio abandonado")
+                            print()
                             personagem.muda_fome(-10)
                             personagem.muda_energia(-15)
                             personagem.muda_humor(-5)
+                            print()
+                            personagem.muda_lugar("pátio abandonado")
                             break
                     else:
                         print(f'\nApesar de tudo {personagem.nome} não consegue fugir da perseguição dos homens uniformizados e novamente é preso(a) na gaiola fria da carrocinha')
                         personagem.muda_lugar('canto frio da carrocinha')
                         if relogio.dia == 1: #Se o dia for igual a 1 o cachorro nao tem a opção de ser adotado (apenas a partir do dia 2)
+                            print()
                             personagem.muda_fome(-15)
                             personagem.muda_energia(-15)
                             personagem.muda_humor(-10)
                             personagem.muda_frio(-5)
+                            print()
                             relogio.avanca_tempo(720) #12h após sair da carrocinha
                             print(f'''\nAs horas se arrastam e {personagem.nome} não tem noção alguma de quanto tempo já está preso(a). O medo toma conta do seu coração, preso(a) naquele lugar pequeno e frio ja não sabe o que pode fazer para fugir. Olha para os lados e ve gaiolas e mais gaiolas empilhadas cheias de cachorros de varias tamanhos, alguns velhos, outros doentes, mas também alguns pequenos filhotes que parecem ter meses de vida. {personagem.nome} vendo isso pensa, "Como pode existir um lugar tão triste como esse?" Os minutos continuam a passar se transformando em horas e mais horas, algumas vezes os homens uniformizados abrem as gaiolas para limpar as sujeiras e levar um pouco de ração seca, que nem se da vontade de comer, e é num desses momentos em que nosso(a) amigo(a) ve uma oportunidade para fugir... O homem uniformizado entra pela porta e a deixa encostada, vai limpando as gaiolas e colocando as comidas, quando tira o jornal sujo da gaiolo e se vira para jogar no lixo, {personagem.nome} aproveita e pula de dentro da gaiola e corre para a porta a fora. Começa uma gritaria e correria atras, mas nosso(a) amigo(a) corre desesperamente em busca da liberdade, e se esconde em um beco escuro.''')
                             personagem.muda_lugar("beco escuro")
@@ -135,11 +151,13 @@ class Carrocinha:
                                 exit()
                             else:
                                 print(f'''\n{personagem.nome} se ve preso(a) num lugar frio e escuro, apenas consegue distinguir formas de outros cachorros presos nas nas gaiolas vizinhas, seu coração está triste e pesado com a posibilidade de ter que ficar lá para toda a sua vida, não tem noção alguma de quanto tempo já ali, mas parece que longas horas já se passaram. {personagem.nome} percebe que sempre eles vem com colocar a comida e trocar os jornais e deixam a porta entre aberta, e com isso tem a ideia de fugir em algum momento de distração do homem uniformizado. A tarde essa oportunidade surge, o homem uniformizaso abre a gaiola e tira o jornal, quando se vira para jogar no e lixo nosso(a) amigo(a) pula para fora da gaiola apressado e corre para a porta. Enquanto isso o homem grita e xinga para ele(a) voltar, sem hesitar continua a correr, mas antes mesmo de passar pela segunda porta é pego(a) por um guarda, ele(a) continua se debatendo e acaba o fazendo escorregar e solta {personagem.nome} que corre rumo a liberdade, se escondendo o mais rápido possível em um beco.''')
+                                print()
                                 personagem.muda_lugar("beco úmido") 
                                 personagem.muda_fome(-15)
                                 personagem.muda_energia(-15)
                                 personagem.muda_humor(-10)
                                 personagem.muda_frio(-5)
+                                print()
                                 relogio.avanca_tempo(720)
                                 noite(personagem, relogio)
                                 break
