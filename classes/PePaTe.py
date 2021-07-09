@@ -56,7 +56,7 @@ class PePaTe:
         sleep(0.8)
         if escolha in "PE": #IF para Pedra
             print('''
-\       n\033[4;93mPEDRA''', end=" ")
+            \033[4;93mPEDRA''', end=" ")
             sleep(0.7)
             print('''PAPEL''', end=" ")
             sleep(0.7)
