@@ -4,6 +4,7 @@ from time import sleep
 from rich.prompt import Prompt
 from pygame import mixer
 import webbrowser  # para abrir links do bowser
+from classes.carrocinha import validar_input
 
 
 def final():
@@ -28,6 +29,8 @@ def opcoes_padrao(relogio, personagem, acao):
         [blue]
         
         '''))
+
+        validar_input(comida, [1, 2], relogio, personagem)
 
         if comida == 1:
             
@@ -220,6 +223,7 @@ def noite(personagem, relogio):
                            1 - Procurar comida
                            2 - Procurar abrigo
                            '''))
+    validar_input(fase_noite, [1, 2], relogio, personagem)
 
     if fase_noite == 1:
         comida_noite = randint(1, 3)
@@ -331,6 +335,8 @@ def noite(personagem, relogio):
                     print()
                     relogio.avanca_dia()
                     break
+
+
 
 
 # definções de efeitos sonoros para cada evento
