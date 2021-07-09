@@ -13,7 +13,7 @@ def fase1(relogio, personagem):
     print(f'\nSão {str(relogio)}, do {relogio.dia}° dia, {personagem.nome} encontra-se em um {personagem.lugar}.')
     print(personagem)
     sleep(1)
-    latido_inicio()  # chamando a função latido
+    latido_inicio()  # Chamando a função latido
     acao1 = int(Prompt.ask(f'''
     O que {personagem.nome} vai fazer?
     [blue]
@@ -41,7 +41,7 @@ def fase1(relogio, personagem):
     fase2(relogio, personagem, acao1)
 
 
-def fase2(relogio, personagem, opcao_escolhida1):
+def fase2(relogio, personagem, opcao_escolhida1): #Aprensenta a escolha, e a situação atual do cão
     print(
         f'São {str(relogio)}, {personagem.nome} você está em um {personagem.lugar}.')
     print(personagem)
@@ -58,13 +58,13 @@ def fase2(relogio, personagem, opcao_escolhida1):
 
     acao2 = int(input('\nQual será sua próxima ação?\n'))
     opcoes_padrao(relogio, personagem, acao2)
-    if acao2 == 5:
-        sorteio_passeio = randint(1, 4)
+    if acao2 == 5: #Condição que define randomicamente o local onde o Cão irá explorar 
+        sorteio_passeio = randint(1, 4) #Random que define qual o destino do cão
         relogio.avanca_tempo(120)
         if sorteio_passeio == 1:
-            personagem.muda_lugar("parque")
+            personagem.muda_lugar("parque") #Random parque
             print(f'"Uma volta no parque sempre é uma boa ideia", pensa {personagem.nome}...')
-            cachorro_hostil = randint(1, 3)
+            cachorro_hostil = randint(1, 3) #Random de escolha para validar o sucesso ou fracasso do personagem
             if cachorro_hostil == 1:
                 cao_amigo()
                 print(f'Esses passeios no parque são produtivos, pois {personagem.nome} consegue se alongar, correr e se divertir, mesmo sozinho(a). Às vezes ele(a) se aproxima de pessoas que dão algum petisco, ou até mesmo carinhos, outras o(a) espantam, ou se afastam assustadas. Mas observando as famílias com seus filhos e pets ele(a) ainda consegue ter esperança no fundo do coração de um dia ter alguém para coçar sua barriga e leva-lo(a) para um lar.')
@@ -97,8 +97,8 @@ def fase2(relogio, personagem, opcao_escolhida1):
                 print()
                 carrocinha.carrocinha(relogio, personagem)
         elif sorteio_passeio == 2:
-            personagem.muda_lugar("shopping")
-            shopping_passeio = randint(1, 3)
+            personagem.muda_lugar("shopping") #Random shopping
+            shopping_passeio = randint(1, 3) #Random de escolha para validar o sucesso ou fracasso do personagem
             print(f'Talvez pudesse ir para a zona sul da cidade para conhecer, pois dizem que são granfinos quem vivem lá. "Talvez eu consiga algum petisco delicioso", pensa {personagem.nome}.')
             if shopping_passeio == 1:
                 latido()
@@ -138,8 +138,8 @@ def fase2(relogio, personagem, opcao_escolhida1):
             personagem.muda_energia(-5)
             personagem.muda_humor(10)
             print()
-            personagem.muda_lugar("padaria")
-            surpresa = randint(1,3)
+            personagem.muda_lugar("padaria") #Random padaria
+            surpresa = randint(1,3) #Random de escolha para validar o sucesso ou fracasso do personagem
             if surpresa == 1:
                 cao_correndo1()
                 print(f'{personagem.nome} corre na padaria na expectativa de ganhar alguma coisa para comer, qualquer coisa é bem vinda, pois as vezes ele(a) fica dias sem comer, então precisa aproveitar todas as oportunidades. Chegando lá seu antigo amigo padeiro o vê, e entra fechando a porta, "Talvez hoje ele esteja de mal humor, ou se esqueceu de mim?", pensa nosso(a) amigo(a). Mas um minuto depois o gentil padeiro aparece com um delicioso pão com mortadela e enrola um pano no pescoço do nosso(a) amigo(a), o gentil padeiro disse que era um cachecol para mante-lo(a) aquecido(a). {personagem.nome} come num piscar de olhos e parte todo(a) feliz e agradecido(a)')
@@ -162,8 +162,8 @@ def fase2(relogio, personagem, opcao_escolhida1):
                 cachorro_chorando()
                 print(f'{personagem.nome} corre para a Padaria em busca de alguns petiscos, parando só para fazer xixi em algumas moitas para dizer que passou por lá, mas quando chega na padaria a porta está fechada, e está cheio de gente. Ele(a) tenta se aproximar mas as pessoas gritam com ele(a) e o mandam sair."Infelizmente hoje não é um dia de tanta sorte," pensa nosso(a) amigo(a).')
         else:
-            personagem.muda_lugar("açougue")
-            sorteioacougue = randint(1, 3)
+            personagem.muda_lugar("açougue") #Random açougue
+            sorteioacougue = randint(1, 3) #Random de escolha para validar o sucesso ou fracasso do personagem
             if sorteioacougue == 1:
                 print(f' {personagem.nome} continua entre as ruas deixando seu nariz conduzir o caminho para algum lugar que possa ter algum petisco gostoso, até que se depara com um açougue.')
                 print()
@@ -173,7 +173,7 @@ def fase2(relogio, personagem, opcao_escolhida1):
                 personagem.muda_frio(10)
                 print()
                 if relogio.dia > 1:
-                    adocao_acougue = randint(1,4)
+                    adocao_acougue = randint(1,4) #Random de escolha para validar se o cão foi adotado APÓS o 2º Dia
                     if adocao_acougue != 1:
                         cao_correndo2()
                         print(f'{personagem.nome}, fica parado(a) admirando as carnes na vitrine do açougue, com a boca salivando de tamanha a vontade, entretanto não se atreve a entrar, ja esta cansado(a) demais para ter que fugir quando for enxotado(a). Ele(a) fica parado(a) ali observando e pensando que a vida as vezes é muito difícil, e mal percebe um funcionário do açougue se aproximando com um osso gigante, e carinhosamente entrega a {personagem.nome} que começa a roer ali mesmo. Em seguida o tal funcionário se aproxima e senta ao lado do nosso(a) amigo(a) e começa a passar a mão na sua cabeça, bem devagarinho, a tempos {personagem.nome} não se sente tão acolhido(a) e se se acomoda mais perto do homem, que o pega e o leva para a parte de tras do açougue. {personagem.nome} não entende muito bem o que está acontecendo, em seguida o homem lhe entrega um cobertor e um potinho com água, lhe faz um afago e diz: "Acho que sua vida não é muito fácil amiguinho(a), as vezes não é a vida na rua é difícil e solitária... Agora você pode viver aqui porque você finalmente encontrou um lar, a partir de hoje eu sou sua companhia e você a minha"')

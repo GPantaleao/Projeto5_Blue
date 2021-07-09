@@ -26,7 +26,7 @@ class Personagem:
         self.__energia = 50
         self.__lugar = 'terreno baldio'
 
-    def __str__(self):          #altera os atributos confome necessidade, sendo valores positivos ou negativos#
+    def __str__(self):          # Altera os atributos confome necessidade, sendo valores positivos ou negativos#
         return f'''
 
         Status {self.__nome}:
