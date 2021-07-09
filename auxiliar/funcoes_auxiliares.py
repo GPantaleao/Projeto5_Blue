@@ -3,10 +3,10 @@ from rich import print
 from time import sleep
 from rich.prompt import Prompt
 from pygame import mixer
-import webbrowser  # para abrir links do bowser
+import webbrowser  # Para abrir links do bowser
 
 
-def final():
+def final(): # Função é mostrada ao final da historia, ou game over
     print ('\n[red]NÃO COMPRE ADOTE![red]\n')
     print_delay (f'''
     Segundo a OMS estima-se que só no Brasil existam mais de 30 milhões de animais abandonados, sendo cerca de 10 milhões de gatos e 20 milhões de cães. No mundo são cerca 200 milhões de animais. Como consta a pesquisa de 2020.
@@ -18,7 +18,7 @@ def final():
        webbrowser.open('https://nfpet.com.br/blog/2019/08/10-ongs-de-animal-para-voce-ajudar/')
        
 
-def opcoes_padrao(relogio, personagem, acao):
+def opcoes_padrao(relogio, personagem, acao): # Função PRINCIPAL que faz toda a logica randomica das escolhas do usuario
     if acao == 1:
         comida = int(Prompt.ask(f'''
         '\nOnde {personagem.nome} vai procurar comida?:
@@ -41,7 +41,7 @@ def opcoes_padrao(relogio, personagem, acao):
 
         if comida == 1:
             
-            sorteio_comida = randint(1,3)
+            sorteio_comida = randint(1,3) # Random para opção COMIDA
             relogio.avanca_tempo(40)
             if sorteio_comida == 1:
                 comendo()
@@ -106,7 +106,7 @@ def opcoes_padrao(relogio, personagem, acao):
                 print()
     
     elif acao == 2:
-        sorteio_amigo = randint(1,3)
+        sorteio_amigo = randint(1,3) # Random para opção AMIGO
         if sorteio_amigo == 1:
             cao_amigo()
             personagem.muda_lugar("beco")
@@ -163,7 +163,7 @@ def opcoes_padrao(relogio, personagem, acao):
 
     elif acao == 3:
         print(f'\n{personagem.nome} está se sentindo um pouco cansado(a), talvez fosse bom procurar por um abrigo para descansar. As ruas podem ser perigosas e frias, se não conseguir um bom lugar para dormir pode ser muito difícil.\n')
-        abrigo = randint(1,2)
+        abrigo = randint(1,2) # Random para opção ABRIGO
         if abrigo == 1:
             cao_correndo1()
             personagem.muda_lugar("becos")
@@ -195,7 +195,7 @@ def opcoes_padrao(relogio, personagem, acao):
                     exit()
 
     elif acao == 4:
-        if relogio.horas >= 19:
+        if relogio.horas >= 19: # Opção DORMIR
             relogio. avanca_dia()
         else: 
             relogio.avanca_tempo(120)
