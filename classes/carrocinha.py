@@ -1,6 +1,6 @@
 from random import randint
 from time import sleep
-
+from rich.prompt import Prompt
 from auxiliar.funcoes_auxiliares import correntes_carrocinha, final
 from auxiliar.funcoes_auxiliares import noite
 from auxiliar.funcoes_auxiliares import latido, cao_correndo1, cao_chorando2, cachorro_chorando, cao_correndo2
